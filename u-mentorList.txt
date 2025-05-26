@@ -1,0 +1,108 @@
+[
+  {
+    "_id": "66c046f4873ee209a315c08e",
+    "name": "Million",
+    "fatherName": "Meseret",
+    "email": "millionmesi1@gmail.com",
+    "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+    "profileImage": "millionProfileImage1.jpeg",
+    "phoneNumber": "0910120891",
+    "mentorType": [
+      "Academic Tutor",
+      "Life Skill Mentor"
+    ],
+    "city": "Jimma",
+    "location": [
+      "Ferenje Arada"
+    ],
+    "rating": 8,
+    "numberOfMentee": 0,
+    "reviews": [
+      {
+        "userId": "user1",
+        "comment": "Great mentor, very helpful and knowledgeable.",
+        "rating": 9,
+        "_id": "66c046f4873ee209a315c08f"
+      },
+      {
+        "userId": "user2",
+        "comment": "Provided excellent guidance, would recommend.",
+        "rating": 8,
+        "_id": "66c046f4873ee209a315c090"
+      }
+    ],
+    "createdAt": "2024-08-17T06:45:08.173Z",
+    "updatedAt": "2024-08-17T06:45:08.173Z",
+    "__v": 0
+  },
+  {
+    "_id": "66c046f5873ee209a315c092",
+    "name": "Yididia",
+    "fatherName": "Meseret",
+    "email": "yididiyameseret89@gmail.com",
+    "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+    "profileImage": "yididyaProfileImage1.jpeg",
+    "phoneNumber": "0923269367",
+    "mentorType": [
+      "Academic Tutor"
+    ],
+    "city": "Jimma",
+    "location": [
+      "Ajip"
+    ],
+    "rating": 5,
+    "numberOfMentee": 5,
+    "reviews": [
+      {
+        "userId": "user3",
+        "comment": "Knowledgeable in the subject, but could be more engaging.",
+        "rating": 6,
+        "_id": "66c046f5873ee209a315c093"
+      },
+      {
+        "userId": "user4",
+        "comment": "Helpful but lacked practical examples.",
+        "rating": 5,
+        "_id": "66c046f5873ee209a315c094"
+      }
+    ],
+    "createdAt": "2024-08-17T06:45:09.358Z",
+    "updatedAt": "2024-08-17T06:45:09.358Z",
+    "__v": 0
+  },
+  {
+    "_id": "66c046f5873ee209a315c096",
+    "name": "Mega",
+    "fatherName": "Kebede",
+    "email": "millimesi106@gmail.com",
+    "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+    "profileImage": "megaProfileImage1.jpeg",
+    "phoneNumber": "0912345678",
+    "mentorType": [
+      "Life Skill Mentor"
+    ],
+    "city": "Jimma",
+    "location": [
+      "kochi"
+    ],
+    "rating": 7,
+    "numberOfMentee": 2,
+    "reviews": [
+      {
+        "userId": "user5",
+        "comment": "Insightful advice and very supportive.",
+        "rating": 7,
+        "_id": "66c046f5873ee209a315c097"
+      },
+      {
+        "userId": "user6",
+        "comment": "Helped me a lot in setting life goals.",
+        "rating": 8,
+        "_id": "66c046f5873ee209a315c098"
+      }
+    ],
+    "createdAt": "2024-08-17T06:45:09.378Z",
+    "updatedAt": "2024-08-17T06:45:09.378Z",
+    "__v": 0
+  }
+]

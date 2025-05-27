@@ -1,0 +1,44 @@
+# Register Ass User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name": "John",
+  "fatherName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "securePassword123"
+}
+
+###
+
+# Login
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "securePassword123"
+}
+
+### 
+
+# Get user by id
+GET http://localhost:5000/users/6835b9e5346da0f557f98d9d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8
+
+### 
+
+# Update user data by id parameter
+PUT http://localhost:5000/users/6835b69799c5a2390e157259
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8
+Content-Type: application/json
+
+{
+  "fatherName": "Bean"
+}
+
+### 
+
+# Delete User by id parameter
+DELETE http://localhost:5000/users/6835b69799c5a2390e157259
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8

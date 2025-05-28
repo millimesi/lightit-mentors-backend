@@ -1,0 +1,15 @@
+# Get mentors list
+GET http://localhost:5000/mentors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8
+
+###
+
+# Get mentors list with page number and limit
+GET http://localhost:5000/mentors?page=1&limit=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8
+
+### 
+
+# Get mentor by id 
+GET http://localhost:5000/mentors/68359e91f4cd4582350acdd0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8

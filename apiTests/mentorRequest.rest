@@ -8,7 +8,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZ
   "userId": "6835b9e5346da0f557f98d9d",
   "menteeFullName": "Jane Doe",
   "location": "Addis Ababa",
-  "message": "Looking for academic guidance" 
+  "message": "Looking for academic guidance"
 }
 
 ### 

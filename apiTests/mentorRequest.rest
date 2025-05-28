@@ -6,20 +6,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZ
 {
   "mentorId": "68359e91f4cd4582350acdd0",
   "userId": "6835b9e5346da0f557f98d9d",
-  "menteeFullName": "Jane Doe",
-  "location": "Addis Ababa",
+  "numberOfMentees": 2,
+  "residentialArea": "Kito Amenu",
   "message": "Looking for academic guidance"
 }
 
 ### 
 
 # Get mentor request by Id
-GET http://localhost:5000/mentor_request/6836ba1179e2aaed2d8157b4
+GET http://localhost:5000/mentor_request/6836cf72eed75cb61b476415
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8
 
 ### 
 
 # Change request Status
 
-GET http://localhost:5000/mentor_request/6836ba1179e2aaed2d8157b4/accepted
+PUT http://localhost:5000/mentor_request/6836d2deeecefe0c62cea87c/rejected
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzQ4MzQ5NjYxfQ.-xYPSbN3bo1D3HycKDj_SdspBEKZtO44fr9PJ2Vrpt8

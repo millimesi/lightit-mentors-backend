@@ -2,6 +2,7 @@
 import MentorRequest from "../models/mentorRequest.js";
 import Mentor from "../models/mentor.js";
 import User from "../models/user.js";
+import mongoose from "mongoose";
 // import sendEmail from "../utils/emailsender.js";
 // import { addEmailJob, addDeclineRequestJob } from "../utils/bullJobs.js";
 
@@ -99,6 +100,11 @@ export default class MentorRequestController {
 
     // get the id
     const requestId = req.params.id;
+
+    // Validate the objectId before querying
+    if (!mongoose.Types.ObjectId.isValid(requestId)) {
+      return res.status(400).json({ error: "Invalid mentor ID format." });
+    }
 
     // query the database by id
     try {

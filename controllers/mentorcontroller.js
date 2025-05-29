@@ -1,90 +1,121 @@
-// Mentor endspoints controller
-import DbClient from '../utils/db.js'
-import getPrice from '../utils/mentorPrice.js';
+// Mentor endpoints controller
+import DbClient from "../utils/db.js";
+import getPrice from "../utils/mentorPrice.js";
 
-// initiate the Database
+// Initialize the database client
 const db = new DbClient();
 
 /**
- * @description - 
- * @
+ * @description Controller class for mentor-related endpoints.
+ * Provides methods to fetch mentor lists and individual mentor details.
  */
 export default class MentorController {
-    static async getMentors(req, res){
-        console.log('GET /mentors is Accessed');
+  /**
+   * GET /mentors
+   * Fetch a paginated list of mentors with relevant public information.
+   * Query params: page (number), limit (number)
+   */
+  static async getMentors(req, res) {
+    console.log("GET /mentors is accessed");
 
-        // get the query parameters and parseInt them
-        try {
-            const page = parseInt(req.query.page) || 1;
-            const limit = parseInt(req.query.limit) || 3;
+    try {
+      // Parse pagination parameters with defaults
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 3;
 
-            // Total number of mentors
-            const totalNumOfMentors = await db.nbMentors()
+      // Get total number of mentors for pagination info
+      const totalNumOfMentors = await db.nbMentors();
 
-            // get the list of mentors
-            // sorted with ascending numberofmentee and paginated
-            const listOfMentors = await db.getListOfMentors(page, limit);
-            
-            // prepare mentor list only by including relevant information
-            // create empty list of mentors to push filtered mentor information
-            let mentorList = [];
+      // Fetch paginated and sorted list of mentors from the database
+      const listOfMentors = await db.getListOfMentors(page, limit);
 
-            // take the listOfMentors and filter each mentor also include price 
-            // and push it to MentorList
-            for (const mentor of listOfMentors) {
-                const mentorInfo = {
-                    _id: mentor._id,
-                    name: mentor.name,
-                    fatherName: mentor.fatherName,
-                    profileImage: mentor.profileImage ? `http://localhost:5000/profileImage/${mentor.profileImage}` : null,
-                    mentorExpertise: mentor.mentorType,
-                    city: mentor.city,
-                    location: mentor.location,
-                    numberOfMentee: mentor.numberOfMentee,
-                    rating: mentor.rating,
-                    price: getPrice(mentor.rating),
-                    revievews: mentor.revievews
-                }
+      // Prepare mentor list with only non-sensitive, relevant fields
+      let mentorList = [];
 
-                // push the mentor to the mentorList
-                mentorList.push(mentorInfo);
-            }
+      for (const mentor of listOfMentors) {
+        const mentorInfo = {
+          id: mentor._id,
+          sex: mentor.sex,
+          name: mentor.name,
+          fatherName: mentor.fatherName,
+          profileImage: mentor.profileImage
+            ? `http://localhost:5000/profileImage/${mentor.profileImage}`
+            : null,
+          gradeBand: mentor.gradeBand,
+          mentoringMode: mentor.mentoringMode,
+          city: mentor.city,
+          about: mentor.about,
+          education: mentor.education,
+          WorkExperience: mentor.WorkExperience,
+          LifePhilosophy: mentor.LifePhilosophy,
+          rating: mentor.rating,
+          review: mentor.review,
+          trainingAndCertification: mentor.trainingAndCertification,
+          BackgroundCheck: mentor.BackgroundCheck,
+          isVisible: mentor.isVisible,
+          skillAndTalent: mentor.skillAndTalent,
+          category: mentor.category,
+          price: mentor.price,
+          // Sensitive fields (email, password, phoneNumber) are intentionally omitted
+        };
 
-            res.status(200).json({ totalNumOfMentors, mentorList });
-        } catch (err) {
-            console.log(`Error: ${err}`);
-            res.status(500).json({ error: 'Server error occurred' });
-        }
+        mentorList.push(mentorInfo);
+      }
+
+      // Respond with total count and filtered mentor list
+      res.status(200).json({ totalNumOfMentors, mentorList });
+    } catch (err) {
+      console.log(`Error in getMentors: ${err}`);
+      res.status(500).json({ error: "Server error occurred" });
     }
+  }
 
-    static async getMentorByID(req, res) {
-        console.log('GET /mentors/:id is Accesseed')
-        
-        // get the id from params
-        const mentorId = req.params.id;
+  /**
+   * GET /mentors/:id
+   * Fetch detailed information for a single mentor by ID.
+   * Path param: id (mentor's MongoDB _id)
+   */
+  static async getMentorByID(req, res) {
+    console.log("GET /mentors/:id is accessed");
 
-        // get the mentor from the database
-        try {
-            const mentor = await db.getMentor(mentorId);
+    const mentorId = req.params.id;
 
-            // filter the mentor and add the incuded price
-            const mentorInfo = {
-                _id: mentor._id,
-                name: mentor.name,
-                fatherName: mentor.fatherName,
-                profileImage: mentor.profileImage,
-                mentorExpertise: mentor.mentorType,
-                city: mentor.city,
-                location: mentor.location,
-                rating: mentor.rating,
-                price: getPrice(mentor.rating),
-                revievews: mentor.revievews
-            }
+    try {
+      // Fetch mentor by ID from the database
+      const mentor = await db.getMentor(mentorId);
 
-            res.status(200).json({ mentorInfo });
-        } catch (err) {
-            console.log(`Error: ${err}`);
-            res.status(500).json({ error: 'Server error occurred' });
-        }
-    } 
+      // Prepare mentor info with only non-sensitive, relevant fields
+      const mentorInfo = {
+        id: mentor._id,
+        sex: mentor.sex,
+        name: mentor.name,
+        fatherName: mentor.fatherName,
+        profileImage: mentor.profileImage
+          ? `http://localhost:5000/profileImage/${mentor.profileImage}`
+          : null,
+        gradeBand: mentor.gradeBand,
+        mentoringMode: mentor.mentoringMode,
+        city: mentor.city,
+        about: mentor.about,
+        education: mentor.education,
+        WorkExperience: mentor.WorkExperience,
+        LifePhilosophy: mentor.LifePhilosophy,
+        rating: mentor.rating,
+        review: mentor.review,
+        trainingAndCertification: mentor.trainingAndCertification,
+        BackgroundCheck: mentor.BackgroundCheck,
+        isVisible: mentor.isVisible,
+        skillAndTalent: mentor.skillAndTalent,
+        category: mentor.category,
+        price: mentor.price,
+        // Sensitive fields (email, password, phoneNumber) are intentionally omitted
+      };
+
+      // Respond with the mentor's public information
+      res.status(200).json({ mentorInfo });
+    } catch (err) {
+      console.log(`Error in getMentorByID: ${err}`);
+      res.status(500).json({ error: "Server error occurred" });
+    }
+  }
 }

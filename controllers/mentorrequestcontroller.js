@@ -2,8 +2,8 @@
 import MentorRequest from "../models/mentorRequest.js";
 import Mentor from "../models/mentor.js";
 import User from "../models/user.js";
-import sendEmail from "../utils/emailsender.js";
-import { addEmailJob, addDeclineRequestJob } from "../utils/bullJobs.js";
+// import sendEmail from "../utils/emailsender.js";
+// import { addEmailJob, addDeclineRequestJob } from "../utils/bullJobs.js";
 
 export default class MentorRequestController {
   /**

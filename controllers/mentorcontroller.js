@@ -1,6 +1,5 @@
 // Mentor endpoints controller
 import DbClient from "../utils/db.js";
-import getPrice from "../utils/mentorPrice.js";
 
 // Initialize the database client
 const db = new DbClient();

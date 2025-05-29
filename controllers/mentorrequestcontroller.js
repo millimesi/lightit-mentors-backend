@@ -58,21 +58,22 @@ export default class MentorRequestController {
       const insertInfo = await mentorRequest.save();
 
       // send an email for the requested mentor
-      const mentorEmail = mentorRequested.email;
-      const emailSubject = "Your have new mentor request!";
-      const emailhtmlBody = `
-                <html>
-                <body>
-                    <p><b>You have a new mentor request for ${numberOfMentees} mentees.</b></h3>
-                    <p><strong>Location:</strong> ${residentialArea}</p>
-                    <p><strong>Message:</strong> ${message}</p>
-                    <p>
-                        <a href="http://localhost:5000/mentor_request/${insertInfo._id}/accepted" style="padding: 10px 20px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px;">Accept Request</a>
-                        <a href="http://localhost:5000/mentor_request/${insertInfo._id}/rejected" style="padding: 10px 20px; background-color: #dc3545; color: #fff; text-decoration: none; border-radius: 5px;">Reject Request</a>
-                    </p>
-                </body>
-                </html>
-            `;
+      // 💥This Job is not working needs fix
+      // const mentorEmail = mentorRequested.email;
+      // const emailSubject = "Your have new mentor request!";
+      // const emailhtmlBody = `
+      //           <html>
+      //           <body>
+      //               <p><b>You have a new mentor request for ${numberOfMentees} mentees.</b></h3>
+      //               <p><strong>Location:</strong> ${residentialArea}</p>
+      //               <p><strong>Message:</strong> ${message}</p>
+      //               <p>
+      //                   <a href="http://localhost:5000/mentor_request/${insertInfo._id}/accepted" style="padding: 10px 20px; background-color: #28a745; color: #fff; text-decoration: none; border-radius: 5px;">Accept Request</a>
+      //                   <a href="http://localhost:5000/mentor_request/${insertInfo._id}/rejected" style="padding: 10px 20px; background-color: #dc3545; color: #fff; text-decoration: none; border-radius: 5px;">Reject Request</a>
+      //               </p>
+      //           </body>
+      //           </html>
+      //       `;
       // 💥This Job is not working needs fix
       // await addEmailJob(mentorEmail, emailSubject, emailhtmlBody);
 

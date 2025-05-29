@@ -81,7 +81,7 @@ const mentorSchema = new Schema(
     price: { type: Number, default: 0 }, // Price per session or service
     email: { type: String, unique: true }, // Mentor's email (should be unique)
     password: { type: String, required: true }, // Hashed password
-    phoneNumber: { type: String, required: true }, // Contact phone number
+    phoneNumber: { type: String, required: true, unique: true }, // Contact phone number
   },
   { timestamps: true, versionKey: "__v" }
 );

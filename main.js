@@ -6,6 +6,7 @@ import mentorList from "./Mentorsdata.js";
 import fs from "fs";
 import crypto from "crypto";
 import { log } from "console";
+import mentors from "./mentor.json" assert { type: "json" };
 
 // Get inforamtion about the database connection paramater
 const host = process.env.DB_HOST || "localhost";
@@ -61,14 +62,28 @@ function writeToFile(fileName, data) {
 // console.log(secret);
 
 (async () => {
-  await connnectToDb();
-  console.log(await User.find());
+  mentors.forEach((mentor, idx) => {
+    // Use id if available, otherwise use idx+1 for uniqueness
+    const id = mentor.id || idx + 1;
+    // Normalize name and fatherName for email
+    const namePart = (mentor.name || "mentor")
+      .toLowerCase()
+      .replace(/\s+/g, "");
+    const fatherPart = (mentor.fatherName || "mentor")
+      .toLowerCase()
+      .replace(/\s+/g, "");
+    mentor.email = `${namePart}.${fatherPart}${id}@example.com`;
+    mentor.password = "1234";
+    mentor.phoneNumber = `+251911${String(id).padStart(6, "0")}`;
+  });
+  // await connnectToDb();
+  // console.log(await User.find());
   // await User.collection.drop();
-  await populateMentors();
+  // await populateMentors();
   // const data = await User.find();
   // const data = await Mentor.find();
   // const data = await MentorRequest.find();
   // console.log(await MentorRequest.find())
-  // writeToFile('u-userList.txt', data);
-  mongoose.connection.close();
+  writeToFile("mentors.json", mentors);
+  // mongoose.connection.close();
 })();

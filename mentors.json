@@ -1,0 +1,1201 @@
+[
+  {
+    "id": 1,
+    "sex": "Male",
+    "name": "Million",
+    "fatherName": "Meseret",
+    "profileImage": "Path",
+    "gradeBand": [
+      "9-10",
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "I am a dedicated educator, engineer, and entrepreneur with a passion for empowering the next generation through knowledge and mentorship. With a strong academic background in mechanical systems and software engineering, I strive to bridge the gap between technical expertise and societal needs. My work focuses on nurturing young minds, building innovative solutions, and leading impactful community projects. Through Light It PLC, I aim to inspire, guide, and transform lives with faith, resilience, and determination.",
+    "education": [
+      "Software Engineering from Alx SE, 2024",
+      "Msc in Mechanical system Design from Jimma University, 2023",
+      "Bsc in Mechanical Enginneering from Jimma University, 2018"
+    ],
+    "WorkExperience": [
+      "Lecture At Jimma University",
+      "Founder of Light it PLC"
+    ],
+    "lifePhilosophy": "With Gods help and grit every thing is possible",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 6
+      }
+    },
+    "review": [
+      {
+        "userName": "Lemelem Mola",
+        "comment": "Million is a greate tutor and mentor he have transformed my child acadamic life, Thank you million.",
+        "rating": 5
+      },
+      {
+        "userName": "Reshad Mola",
+        "comment": "Thank you million for your help",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "Light it Mentors"
+    },
+    "BackgroundCheck": false,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Writing story",
+      "Mechanical System Design",
+      "Web development"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Life Skill Mentor"
+    ],
+    "price": 300,
+    "email": "million.meseret1@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000001"
+  },
+  {
+    "id": 2,
+    "sex": "Female",
+    "name": "Hana",
+    "fatherName": "Tesfaye",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4",
+      "5-8"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "Educator and researcher",
+    "education": [
+      "PhD in Education Policy",
+      "M.Ed in Curriculum Design",
+      "BA in English Literature"
+    ],
+    "WorkExperience": [
+      "Lecturer at Addis Ababa University",
+      "Consultant for UNICEF"
+    ],
+    "lifePhilosophy": "Education is the most powerful weapon",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 6
+      }
+    },
+    "review": [
+      {
+        "userName": "Tadesse Alemu",
+        "comment": "Very insightful lectures and support.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "World Bank Academy"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Public speaking",
+      "Writing",
+      "Mentoring"
+    ],
+    "category": [
+      "Acadamic Tutor"
+    ],
+    "price": 250,
+    "email": "hana.tesfaye2@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000002"
+  },
+  {
+    "id": 3,
+    "name": "Samuel",
+    "sex": "Male",
+    "fatherName": "Berhanu",
+    "profileImage": "Path",
+    "gradeBand": [
+      "9-10",
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "Tech enthusiast and full-stack developer",
+    "education": [
+      "BSc in Computer Science",
+      "Certified MERN Stack Developer"
+    ],
+    "WorkExperience": [
+      "Developer at AndegnaTech",
+      "Freelancer"
+    ],
+    "lifePhilosophy": "Code. Debug. Repeat.",
+    "rating": {
+      "roundedAverage": 3,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 6
+      }
+    },
+    "review": [
+      {
+        "userName": "Kalkidan Tesema",
+        "comment": "Built our company website with professionalism.",
+        "rating": 4
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "ALX Software Engineering"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Web development",
+      "Problem solving",
+      "Music"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Art Mentor"
+    ],
+    "price": 250,
+    "email": "samuel.berhanu3@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000003"
+  },
+  {
+    "id": 4,
+    "name": "Sara",
+    "sex": "Female",
+    "fatherName": "Abebe",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4",
+      "5-8",
+      "9-10"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "Mentor in life coaching",
+    "education": [
+      "Certified Life Coach",
+      "BA in Psychology"
+    ],
+    "WorkExperience": [
+      "Independent Life Coach",
+      "Volunteer Counselor"
+    ],
+    "lifePhilosophy": "Live with purpose and clarity.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 6
+      }
+    },
+    "review": [
+      {
+        "userName": "Daniel Yohannes",
+        "comment": "Her sessions changed how I view myself.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "Coaching Institute of Ethiopia"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Empathy",
+      "Storytelling",
+      "Guided meditation"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Story Writing Mentor"
+    ],
+    "price": 200,
+    "email": "sara.abebe4@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000004"
+  },
+  {
+    "id": 5,
+    "sex": "Female",
+    "name": "Abel",
+    "fatherName": "Solomon",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4",
+      "5-8"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "Finance specialist with a tech twist",
+    "education": [
+      "MBA in Finance",
+      "BSc in Information Systems"
+    ],
+    "WorkExperience": [
+      "Financial Analyst at EthioBank",
+      "Data Analyst at TechnoEdge"
+    ],
+    "lifePhilosophy": "Numbers tell a story — listen well.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 6
+      }
+    },
+    "review": [
+      {
+        "userName": "Marta Habte",
+        "comment": "Helped us restructure our finances efficiently.",
+        "rating": 4
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "IFC Training Program"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Excel modeling",
+      "Budget planning"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Music Mentor"
+    ],
+    "price": 200,
+    "email": "abel.solomon5@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000005"
+  },
+  {
+    "id": 6,
+    "name": "Mekdes",
+    "sex": "Female",
+    "fatherName": "Teshome",
+    "profileImage": "Path",
+    "gradeBand": [
+      "5-8",
+      "9-10",
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "STEM education advocate and robotics coach",
+    "education": [
+      "BSc in Electrical Engineering",
+      "Certified Robotics Instructor"
+    ],
+    "WorkExperience": [
+      "STEM Coordinator at TechStart",
+      "Coach for National Robotics Challenge"
+    ],
+    "lifePhilosophy": "Inspiring curiosity leads to innovation.",
+    "rating": {
+      "roundedAverage": 2,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 6
+      }
+    },
+    "review": [
+      {
+        "userName": "Yohannes Bekele",
+        "comment": "My child found a new love for science through her coaching.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": false,
+      "trainer": null
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Robotics",
+      "Public speaking",
+      "Mentoring"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Technology Mentor"
+    ],
+    "price": 250,
+    "email": "mekdes.teshome6@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000006"
+  },
+  {
+    "id": 7,
+    "sex": "Male",
+    "name": "Getahun",
+    "fatherName": "Alemayehu",
+    "profileImage": "Path",
+    "gradeBand": [
+      "9-10",
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Addis Ababa",
+    "about": "Physics teacher and science communicator.",
+    "education": [
+      "MSc in Physics",
+      "BSc in Physics"
+    ],
+    "WorkExperience": [
+      "Teacher at St. Joseph School",
+      "Science Fair Organizer"
+    ],
+    "lifePhilosophy": "Curiosity is the engine of achievement.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 0,
+        "fourStar": 4,
+        "fiveStar": 5
+      }
+    },
+    "review": [
+      {
+        "userName": "Selamawit T.",
+        "comment": "Explains complex topics simply.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "Ethiopian Science Teachers Association"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Physics experiments",
+      "Public speaking"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Science Mentor"
+    ],
+    "price": 220,
+    "email": "getahun.alemayehu7@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000007"
+  },
+  {
+    "id": 8,
+    "sex": "Female",
+    "name": "Lily",
+    "fatherName": "Kebede",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4",
+      "5-8"
+    ],
+    "mentoringMode": [
+      "online"
+    ],
+    "city": "Hawassa",
+    "about": "Passionate about early childhood education.",
+    "education": [
+      "BA in Early Childhood Education"
+    ],
+    "WorkExperience": [
+      "Kindergarten Teacher at Hawassa Model School"
+    ],
+    "lifePhilosophy": "Every child is a different kind of flower.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 0,
+        "fourStar": 2,
+        "fiveStar": 8
+      }
+    },
+    "review": [
+      {
+        "userName": "Mulugeta A.",
+        "comment": "Very patient and creative with kids.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "UNICEF Early Childhood Program"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Storytelling",
+      "Drawing"
+    ],
+    "category": [
+      "Acadamic Tutor"
+    ],
+    "price": 180,
+    "email": "lily.kebede8@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000008"
+  },
+  {
+    "id": 9,
+    "sex": "Male",
+    "name": "Brook",
+    "fatherName": "Haile",
+    "profileImage": "Path",
+    "gradeBand": [
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person"
+    ],
+    "city": "Bahir Dar",
+    "about": "Mathematics enthusiast and Olympiad coach.",
+    "education": [
+      "BSc in Mathematics"
+    ],
+    "WorkExperience": [
+      "Math Olympiad Coach",
+      "High School Math Teacher"
+    ],
+    "lifePhilosophy": "Mathematics is the language of the universe.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 1,
+        "fourStar": 5,
+        "fiveStar": 4
+      }
+    },
+    "review": [
+      {
+        "userName": "Aster F.",
+        "comment": "Helped me win a math competition.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "National Math Olympiad Program"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Problem solving",
+      "Math games"
+    ],
+    "category": [
+      "Acadamic Tutor"
+    ],
+    "price": 230,
+    "email": "brook.haile9@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000009"
+  },
+  {
+    "id": 10,
+    "sex": "Female",
+    "name": "Ruth",
+    "fatherName": "Mekonnen",
+    "profileImage": "Path",
+    "gradeBand": [
+      "5-8",
+      "9-10"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Adama",
+    "about": "English language mentor and debate coach.",
+    "education": [
+      "BA in English Literature"
+    ],
+    "WorkExperience": [
+      "English Teacher at Adama High School",
+      "Debate Club Coordinator"
+    ],
+    "lifePhilosophy": "Communication opens doors.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 0,
+        "fourStar": 3,
+        "fiveStar": 7
+      }
+    },
+    "review": [
+      {
+        "userName": "Biruk G.",
+        "comment": "Improved my speaking skills a lot.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "British Council"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Debate",
+      "Essay writing"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Language Mentor"
+    ],
+    "price": 210,
+    "email": "ruth.mekonnen10@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000010"
+  },
+  {
+    "id": 11,
+    "sex": "Male",
+    "name": "Yonas",
+    "fatherName": "Gebre",
+    "profileImage": "Path",
+    "gradeBand": [
+      "9-10"
+    ],
+    "mentoringMode": [
+      "online"
+    ],
+    "city": "Dire Dawa",
+    "about": "Chemistry teacher with a love for experiments.",
+    "education": [
+      "BSc in Chemistry"
+    ],
+    "WorkExperience": [
+      "Chemistry Teacher at Dire Dawa Secondary School"
+    ],
+    "lifePhilosophy": "Experiment, learn, repeat.",
+    "rating": {
+      "roundedAverage": 3,
+      "ratingDetail": {
+        "oneStar": 1,
+        "twoStar": 1,
+        "threeStar": 2,
+        "fourStar": 3,
+        "fiveStar": 3
+      }
+    },
+    "review": [
+      {
+        "userName": "Selam D.",
+        "comment": "Makes chemistry fun and easy.",
+        "rating": 4
+      }
+    ],
+    "trainingAndCertification": {
+      "status": false,
+      "trainer": null
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Lab experiments",
+      "Science fairs"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Science Mentor"
+    ],
+    "price": 190,
+    "email": "yonas.gebre11@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000011"
+  },
+  {
+    "id": 12,
+    "sex": "Female",
+    "name": "Helen",
+    "fatherName": "Tadesse",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4"
+    ],
+    "mentoringMode": [
+      "In-Person"
+    ],
+    "city": "Gondar",
+    "about": "Specialist in creative arts for children.",
+    "education": [
+      "BA in Fine Arts"
+    ],
+    "WorkExperience": [
+      "Art Teacher at Gondar Primary School"
+    ],
+    "lifePhilosophy": "Creativity is intelligence having fun.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 0,
+        "fourStar": 2,
+        "fiveStar": 8
+      }
+    },
+    "review": [
+      {
+        "userName": "Meklit Z.",
+        "comment": "My daughter loves her art classes.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "National Arts Council"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Painting",
+      "Crafts"
+    ],
+    "category": [
+      "Art Mentor"
+    ],
+    "price": 170,
+    "email": "helen.tadesse12@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000012"
+  },
+  {
+    "id": 13,
+    "sex": "Male",
+    "name": "Dawit",
+    "fatherName": "Solomon",
+    "profileImage": "Path",
+    "gradeBand": [
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Jimma",
+    "about": "Economics lecturer and business mentor.",
+    "education": [
+      "MSc in Economics",
+      "BSc in Business Administration"
+    ],
+    "WorkExperience": [
+      "Lecturer at Jimma University",
+      "Business Consultant"
+    ],
+    "lifePhilosophy": "Opportunities are created, not found.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 1,
+        "fourStar": 4,
+        "fiveStar": 4
+      }
+    },
+    "review": [
+      {
+        "userName": "Abraham M.",
+        "comment": "Helped me start my own business.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "World Bank Academy"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Business planning",
+      "Economics"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Business Mentor"
+    ],
+    "price": 260,
+    "email": "dawit.solomon13@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000013"
+  },
+  {
+    "id": 14,
+    "sex": "Female",
+    "name": "Rahel",
+    "fatherName": "Mulugeta",
+    "profileImage": "Path",
+    "gradeBand": [
+      "5-8",
+      "9-10"
+    ],
+    "mentoringMode": [
+      "online"
+    ],
+    "city": "Mekelle",
+    "about": "Mentor in environmental science and sustainability.",
+    "education": [
+      "MSc in Environmental Science"
+    ],
+    "WorkExperience": [
+      "Environmental Consultant",
+      "Teacher at Green School"
+    ],
+    "lifePhilosophy": "Protect the earth for future generations.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 2,
+        "fourStar": 5,
+        "fiveStar": 3
+      }
+    },
+    "review": [
+      {
+        "userName": "Hirut S.",
+        "comment": "Inspired my interest in sustainability.",
+        "rating": 4
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "UN Environment Program"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Project management",
+      "Public speaking"
+    ],
+    "category": [
+      "Science Mentor"
+    ],
+    "price": 210,
+    "email": "rahel.mulugeta14@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000014"
+  },
+  {
+    "id": 15,
+    "sex": "Male",
+    "name": "Mulu",
+    "fatherName": "Tsegaye",
+    "profileImage": "Path",
+    "gradeBand": [
+      "9-10",
+      "11-12"
+    ],
+    "mentoringMode": [
+      "In-Person"
+    ],
+    "city": "Adigrat",
+    "about": "History teacher and cultural heritage guide.",
+    "education": [
+      "BA in History"
+    ],
+    "WorkExperience": [
+      "History Teacher at Adigrat High School",
+      "Tour Guide"
+    ],
+    "lifePhilosophy": "Learn from the past to shape the future.",
+    "rating": {
+      "roundedAverage": 3,
+      "ratingDetail": {
+        "oneStar": 1,
+        "twoStar": 1,
+        "threeStar": 3,
+        "fourStar": 3,
+        "fiveStar": 2
+      }
+    },
+    "review": [
+      {
+        "userName": "Sisay A.",
+        "comment": "His stories make history come alive.",
+        "rating": 4
+      }
+    ],
+    "trainingAndCertification": {
+      "status": false,
+      "trainer": null
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Storytelling",
+      "Guiding"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "History Mentor"
+    ],
+    "price": 200,
+    "email": "mulu.tsegaye15@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000015"
+  },
+  {
+    "id": 16,
+    "sex": "Female",
+    "name": "Sofia",
+    "fatherName": "Abdisa",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4",
+      "5-8"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Assosa",
+    "about": "Music teacher and choir director.",
+    "education": [
+      "BA in Music"
+    ],
+    "WorkExperience": [
+      "Music Teacher at Assosa Primary School",
+      "Choir Director"
+    ],
+    "lifePhilosophy": "Music is the universal language.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 0,
+        "fourStar": 2,
+        "fiveStar": 8
+      }
+    },
+    "review": [
+      {
+        "userName": "Tigist E.",
+        "comment": "My son learned to play piano with her.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "National Music Academy"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Singing",
+      "Piano",
+      "Conducting"
+    ],
+    "category": [
+      "Music Mentor"
+    ],
+    "price": 220,
+    "email": "sofia.abdisa16@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000016"
+  },
+  {
+    "id": 17,
+    "sex": "Male",
+    "name": "Fitsum",
+    "fatherName": "Kassa",
+    "profileImage": "Path",
+    "gradeBand": [
+      "5-8",
+      "9-10"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Debre Markos",
+    "about": "Biology teacher and environmental activist.",
+    "education": [
+      "BSc in Biology",
+      "Diploma in Environmental Studies"
+    ],
+    "WorkExperience": [
+      "Biology Teacher at Debre Markos School",
+      "NGO Volunteer"
+    ],
+    "lifePhilosophy": "Nature is our best teacher.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 1,
+        "fourStar": 4,
+        "fiveStar": 4
+      }
+    },
+    "review": [
+      {
+        "userName": "Mekdes T.",
+        "comment": "Makes biology practical and fun.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "Green Ethiopia"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Field research",
+      "Public speaking"
+    ],
+    "category": [
+      "Science Mentor"
+    ],
+    "price": 210,
+    "email": "fitsum.kassa17@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000017"
+  },
+  {
+    "id": 18,
+    "sex": "Female",
+    "name": "Selam",
+    "fatherName": "Ayalew",
+    "profileImage": "Path",
+    "gradeBand": [
+      "Kg-4"
+    ],
+    "mentoringMode": [
+      "In-Person"
+    ],
+    "city": "Wolaita Sodo",
+    "about": "Early childhood educator and storyteller.",
+    "education": [
+      "BA in Early Childhood Education"
+    ],
+    "WorkExperience": [
+      "Kindergarten Teacher at Sodo Model School"
+    ],
+    "lifePhilosophy": "Every child deserves a champion.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 0,
+        "fourStar": 2,
+        "fiveStar": 8
+      }
+    },
+    "review": [
+      {
+        "userName": "Abel G.",
+        "comment": "My son loves her stories and songs.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "UNICEF"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Storytelling",
+      "Singing"
+    ],
+    "category": [
+      "Acadamic Tutor"
+    ],
+    "price": 180,
+    "email": "selam.ayalew18@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000018"
+  },
+  {
+    "id": 19,
+    "sex": "Male",
+    "name": "Tesfaye",
+    "fatherName": "Demissie",
+    "profileImage": "Path",
+    "gradeBand": [
+      "11-12"
+    ],
+    "mentoringMode": [
+      "online"
+    ],
+    "city": "Harar",
+    "about": "IT professional and coding mentor.",
+    "education": [
+      "BSc in Information Technology",
+      "Certified Python Developer"
+    ],
+    "WorkExperience": [
+      "Software Engineer at HararTech",
+      "Freelance Trainer"
+    ],
+    "lifePhilosophy": "Keep learning, keep growing.",
+    "rating": {
+      "roundedAverage": 4,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 1,
+        "threeStar": 1,
+        "fourStar": 3,
+        "fiveStar": 5
+      }
+    },
+    "review": [
+      {
+        "userName": "Ruth M.",
+        "comment": "Helped me build my first app.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "ALX Africa"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Python",
+      "Web development"
+    ],
+    "category": [
+      "Technology Mentor"
+    ],
+    "price": 240,
+    "email": "tesfaye.demissie19@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000019"
+  },
+  {
+    "id": 20,
+    "sex": "Female",
+    "name": "Marta",
+    "fatherName": "Hailu",
+    "profileImage": "Path",
+    "gradeBand": [
+      "5-8",
+      "9-10"
+    ],
+    "mentoringMode": [
+      "In-Person",
+      "online"
+    ],
+    "city": "Shashemene",
+    "about": "Literature teacher and creative writing coach.",
+    "education": [
+      "BA in Literature",
+      "MA in Creative Writing"
+    ],
+    "WorkExperience": [
+      "Literature Teacher at Shashemene High School",
+      "Writing Workshop Facilitator"
+    ],
+    "lifePhilosophy": "Words can change the world.",
+    "rating": {
+      "roundedAverage": 5,
+      "ratingDetail": {
+        "oneStar": 0,
+        "twoStar": 0,
+        "threeStar": 0,
+        "fourStar": 2,
+        "fiveStar": 8
+      }
+    },
+    "review": [
+      {
+        "userName": "Brook T.",
+        "comment": "Her feedback improved my essays a lot.",
+        "rating": 5
+      }
+    ],
+    "trainingAndCertification": {
+      "status": true,
+      "trainer": "Writers' Association of Ethiopia"
+    },
+    "BackgroundCheck": true,
+    "isVisible": true,
+    "skillAndTalent": [
+      "Creative writing",
+      "Editing"
+    ],
+    "category": [
+      "Acadamic Tutor",
+      "Art Mentor"
+    ],
+    "price": 200,
+    "email": "marta.hailu20@example.com",
+    "password": "1234",
+    "phoneNumber": "+251911000020"
+  }
+]

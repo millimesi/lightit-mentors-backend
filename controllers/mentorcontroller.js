@@ -1,5 +1,7 @@
 // Mentor endpoints controller
 import DbClient from "../utils/db.js";
+import Mentor from "../models/mentor.js";
+import mongoose from "mongoose";
 
 // Initialize the database client
 const db = new DbClient();
@@ -79,9 +81,19 @@ export default class MentorController {
 
     const mentorId = req.params.id;
 
+    // Validate the objectId before querying
+    if (!mongoose.Types.ObjectId.isValid(mentorId)) {
+      return res.status(400).json({ error: "Invalid mentor ID format." });
+    }
+
     try {
       // Fetch mentor by ID from the database
-      const mentor = await db.getMentor(mentorId);
+      const mentor = await Mentor.findById(mentorId);
+
+      // If the mentor doesn't exist return not find
+      if (!mentor) {
+        return res.status(400).json({ error: "Mentor doesn't exist." });
+      }
 
       // Prepare mentor info with only non-sensitive, relevant fields
       const mentorInfo = {

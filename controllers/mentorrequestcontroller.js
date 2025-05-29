@@ -141,7 +141,7 @@ export default class MentorRequestController {
       const updatedRequest = await MentorRequest.findByIdAndUpdate(
         id,
         { status: status },
-        { new: true } // Return the updated document
+        { new: true }
       );
 
       // if the status of the updated is rejected send request rejected

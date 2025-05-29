@@ -1,48 +1,91 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
 /**
- * @description Defines the schema for mentors in the app
- * @property {String} name - name of the mentor
- * @property {String} fatherName - father name of the mentor
- * @property {String} email - email of the mentor
- * @property {String} password - hashed password of the user
- * @property {String} phoneNumber - phone number of the 
- * @property {String} profileImage -profile image of the mentor
- * @property {String[]} mentorType - type of the mentorship
- * for e.g ["Academic Tutor", "Life Skill Coach"]
- * @property {String} city - Working city of the mentor
- * @property {String[]} location - Working location of the mentor in the city
- * @property {Number} rating - rating of the mentor out of ten
- * @property {Object[]} reviews - reviews given to the mentor
- * @property {String} reviews.userId - the reviewer user Id
- * @property {String} reviews.comment - the comment of the user
- * @property {Number} reviews.rating - rating for the mentor by user
+ * Sub-schema for detailed rating breakdown.
  */
-
-const mentorSchema = new Schema(
+const ratingDetailSchema = new Schema(
   {
-    name: { type: String, required: true },
-    fatherName: { type: String, required: true },
-    email: { type: String, unique: true },
-    password: { type: String, required: true },
-    profileImage: { type: String, default: ''},
-    phoneNumber: { type: String, required: true },
-    mentorType: { type: [String], default: ['Academic Tutor'] },
-    city: { type: String, default: 'Jimma' },
-    location: { type: [String], default: [] },
-    rating: { type: Number, default: 1 },
-    numberOfMentee: { type: Number, default: 0 },
-    reviews: [{
-      userId: { type: String, default: '' },
-      comment: { type: String, defalt: '' },
-      rating: { type: Number, default: 0 },
-    }],
+    oneStar: { type: Number, default: 0 },
+    twoStar: { type: Number, default: 0 },
+    threeStar: { type: Number, default: 0 },
+    fourStar: { type: Number, default: 0 },
+    fiveStar: { type: Number, default: 0 },
   },
-  { timestamps: true }, // Automatically adds createdAt and updatedAt time stamp
-  { versionKey: '__v' }, // Automatical creates and update version of the schema
+  { _id: false }
 );
 
-const Mentor = mongoose.model('Mentor', mentorSchema);
+/**
+ * Sub-schema for overall rating.
+ */
+const ratingSchema = new Schema(
+  {
+    roundedAverage: { type: Number, default: 0 },
+    ratingDetail: { type: ratingDetailSchema, default: () => ({}) },
+  },
+  { _id: false }
+);
+
+/**
+ * Sub-schema for mentor reviews.
+ */
+const reviewSchema = new Schema(
+  {
+    userName: { type: String, default: "" },
+    comment: { type: String, default: "" },
+    rating: { type: Number, default: 0 },
+  },
+  { _id: false }
+);
+
+/**
+ * Sub-schema for training and certification details.
+ */
+const trainingAndCertificationSchema = new Schema(
+  {
+    status: { type: Boolean, default: false },
+    trainer: { type: String, default: null },
+  },
+  { _id: false }
+);
+
+/**
+ * @description Defines the schema for mentors in the app.
+ * This schema is designed to closely match the mentor data structure
+ * as seen in mentor.json, supporting all relevant fields for the application.
+ */
+const mentorSchema = new Schema(
+  {
+    sex: { type: String, enum: ["Male", "Female"], required: true }, // Gender of the mentor
+    name: { type: String, required: true }, // Mentor's name
+    fatherName: { type: String, required: true }, // Father's name
+    profileImage: { type: String, default: "" }, // Path or URL to profile image
+    gradeBand: { type: [String], default: [] }, // Grade bands the mentor covers
+    mentoringMode: { type: [String], default: [] }, // Modes of mentoring (e.g., In-Person, online)
+    city: { type: String, default: "Jimma" }, // City of operation
+    about: { type: String, default: "" }, // Mentor's bio/description
+    education: { type: [String], default: [] }, // Educational background
+    WorkExperience: { type: [String], default: [] }, // Work experience entries
+    LifePhilosophy: { type: String, default: "" }, // Mentor's life philosophy
+    rating: { type: ratingSchema, default: () => ({}) }, // Rating details
+    review: { type: [reviewSchema], default: [] }, // Array of reviews
+    trainingAndCertification: {
+      type: trainingAndCertificationSchema,
+      default: () => ({}),
+    }, // Training and certification info
+    BackgroundCheck: { type: Boolean, default: false }, // Background check status
+    isVisible: { type: Boolean, default: true }, // Visibility status
+    skillAndTalent: { type: [String], default: [] }, // Skills and talents
+    category: { type: [String], default: [] }, // Mentor categories
+    price: { type: Number, default: 0 }, // Price per session or service
+    email: { type: String, unique: true }, // Mentor's email (should be unique)
+    password: { type: String, required: true }, // Hashed password
+    phoneNumber: { type: String, required: true }, // Contact phone number
+  },
+  { timestamps: true, versionKey: "__v" }
+);
+
+// Export the Mentor model for use in the application.
+const Mentor = mongoose.model("Mentor", mentorSchema);
 export default Mentor;

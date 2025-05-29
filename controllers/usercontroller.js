@@ -3,6 +3,7 @@ import User from "../models/user.js";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
 
 dotenv.config();
 
@@ -64,6 +65,11 @@ export default class UserController {
 
     // Get the id from request paramete
     const id = req.params.id;
+
+    // Validate the objectId before querying
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ error: "Invalid mentor ID format." });
+    }
 
     // retrive the user from the data base
     try {

@@ -23,7 +23,9 @@ if (fs.existsSync(envPath)) {
 // Config Environment variable and export
 export default {
   env: process.env.NODE_ENV,
-  port: process.env.SERVER_PORT,
-  DbName: process.env.DB_NAME,
   jwtSecret: process.env.ACCESS_TOKEN_SECRET,
+  port: process.env.SERVER_PORT,
+  dbHost: process.env.DB_HOST,
+  dbPort: process.env.DB_PORT,
+  dbName: process.env.DB_NAME,
 };

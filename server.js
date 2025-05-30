@@ -1,8 +1,8 @@
 import express from "express";
 import config from "./config/config.js";
-import insertRoutes from "./routes/index.js";
-
-// const port = process.env.SERVER_PORT || 4000;
+import usersRouter from "./routes/users.js";
+import mentorsRouter from "./routes/mentors.js";
+import mentorRequestRouter from "./routes/mentorRequest.js";
 
 const api = express();
 
@@ -13,7 +13,9 @@ api.use(express.json());
 api.use("/profileImage", express.static("public/profileImage"));
 
 // insert the routes
-insertRoutes(api);
+api.use("/users", usersRouter);
+api.use("/mentors", mentorsRouter);
+api.use("/mentor_request", mentorRequestRouter);
 
 api.listen(config.port, () => {
   console.log(`✅ API server is listening on port: ${config.port}`);

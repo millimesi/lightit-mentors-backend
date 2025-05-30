@@ -1,25 +1,18 @@
 // Database connection and management
 import mongoose from "mongoose";
 import Mentor from "../models/mentor.js";
-import dotenv from "dotenv";
-
-dotenv.config();
+import config from "../config/config.js";
 
 export default class DbClient {
   constructor() {
     // Set database url parameters
-    const host = process.env.DB_HOST || "localhost";
-    const port = process.env.DB_PORT || 27017;
-    const dbName = process.env.MENTORS_DB || "light_it_Mentors";
-    const dbUrl = `mongodb://${host}:${port}/${dbName}`;
+    const dbUrl = `mongodb://${config.dbHost}:${config.dbPort}/${config.dbName}`;
 
     // Connect to the data base
     mongoose
       .connect(dbUrl)
       .then(() => {
-        console.log(
-          `Database connection is established. readyState: ${mongoose.connection.readyState}`
-        );
+        console.log(`Database connection is established.`);
       })
       .catch((error) => console.log(`Connection Error: ${error}`));
 

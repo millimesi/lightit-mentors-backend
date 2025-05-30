@@ -16,5 +16,5 @@ api.use("/profileImage", express.static("public/profileImage"));
 insertRoutes(api);
 
 api.listen(config.port, () => {
-  console.log(`API server is listening on port ${config.port}`);
+  console.log(`✅ API server is listening on port: ${config.port}`);
 });

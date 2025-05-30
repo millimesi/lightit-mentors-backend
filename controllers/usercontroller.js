@@ -1,15 +1,11 @@
 // User endpoints controllers
 import User from "../models/user.js";
 import bcrypt from "bcrypt";
-import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
-
-dotenv.config();
+import config from "../config/config.js";
 
 export default class UserController {
-  // Create new user
-  // POST /users
   static async postNewUser(req, res) {
     console.log("POST /users is Accessed");
     const data = req.body;
@@ -63,7 +59,7 @@ export default class UserController {
   static async getUserById(req, res) {
     console.log("GET /users/:id is Accessed");
 
-    // Get the id from request paramete
+    // Get the id from request parameter
     const id = req.params.id;
 
     // Validate the objectId before querying
@@ -71,7 +67,7 @@ export default class UserController {
       return res.status(400).json({ error: "Invalid mentor ID format." });
     }
 
-    // retrive the user from the data base
+    // retrieve the user from the data base
     try {
       const user = await User.findById(id);
 
@@ -92,11 +88,6 @@ export default class UserController {
     }
   }
 
-  /**
-   *
-   * @param {*} req
-   * @param {*} res
-   */
   static async updateUserById(req, res) {
     console.log("PUT /users/:id is Accessed");
 
@@ -166,20 +157,20 @@ export default class UserController {
       const user = await User.findOne({ email: reqEmail });
 
       // console.log(user);
-      // if user is null retun not found error
+      // if user is null return not found error
       if (!user) {
         return res.status(400).json({ error: "user not found" });
       }
 
-      // if user found comare the password with reqPassword by bcrypt
-      // if comparision passes respond login sussesfull else incorrect password
+      // if user found compare the password with reqPassword by bcrypt
+      // if comparison passes respond login successful else incorrect password
       if (!(await bcrypt.compare(reqPassword, user.password))) {
         return res.status(400).json({ error: "incorrect password" });
       }
 
       // create jwt ( access token)
       const jwtpayload = { email: user.email };
-      const accessToken = jwt.sign(jwtpayload, process.env.ACCESS_TOKEN_SECRET); // is not set { expiresIn: '15m' }
+      const accessToken = jwt.sign(jwtpayload, config.jwtSecret); // is not set { expiresIn: '15m' }
 
       res.status(200).json({ message: "login successful", accessToken });
     } catch (err) {

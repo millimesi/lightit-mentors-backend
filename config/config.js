@@ -15,5 +15,15 @@ const envPath = path.resolve(currentDirName, `../.env.${NODE_ENV}`);
 // Check if the .env file is exists and config it
 if (fs.existsSync(envPath)) {
   dotenv.config({ path: envPath });
-  console.log();
+  console.log(`✅ Loaded environment: ${NODE_ENV}`);
+} else {
+  throw new Error(`❌ .env file is not found: ${envPath}`);
 }
+
+// Config Environment variable
+export default {
+  env: process.env.NODE_ENV,
+  port: process.env.SERVER_PORT,
+  DbName: process.env.DB_NAME,
+  jwtSecret: process.env.ACCESS_TOKEN_SECRET,
+};

@@ -20,7 +20,7 @@ if (fs.existsSync(envPath)) {
   throw new Error(`❌ .env file is not found: ${envPath}`);
 }
 
-// Config Environment variable
+// Config Environment variable and export
 export default {
   env: process.env.NODE_ENV,
   port: process.env.SERVER_PORT,

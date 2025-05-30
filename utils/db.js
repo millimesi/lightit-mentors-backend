@@ -12,7 +12,7 @@ export default class DbClient {
     mongoose
       .connect(dbUrl)
       .then(() => {
-        console.log(`Database connection is established.`);
+        console.log(`✅ Database connection is established`);
       })
       .catch((error) => console.log(`Connection Error: ${error}`));
 

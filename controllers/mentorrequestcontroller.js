@@ -137,6 +137,13 @@ export default class MentorRequestController {
       // check if the requeste is proccessed before to be rejected, accepted and declined
       // get the mentor request by Id
       const getMentorRequest = await MentorRequest.findById(id);
+
+      // If Mentor request file is not found respond not found
+      if (!getMentorRequest) {
+        return res.status(400).json({
+          error: `Mentor request data is not found with Id: ${id}1`,
+        });
+      }
       const requestStatus = getMentorRequest.status;
 
       // if the status is not  one of them respond the request is processed

@@ -2,6 +2,7 @@
 import DbClient from "../utils/db.js";
 import Mentor from "../models/mentor.js";
 import mongoose from "mongoose";
+import AppError from "../utils/AppError.js";
 
 // Initialize the database client
 const db = new DbClient();
@@ -16,7 +17,7 @@ export default class MentorController {
    * Fetch a paginated list of mentors with relevant public information.
    * Query params: page (number), limit (number)
    */
-  static async getMentors(req, res) {
+  static async getMentors(req, res, next) {
     console.log("GET /mentors is accessed");
 
     try {
@@ -66,8 +67,7 @@ export default class MentorController {
       // Respond with total count and filtered mentor list
       res.status(200).json({ totalNumOfMentors, mentorList });
     } catch (err) {
-      console.log(`Error in getMentors: ${err}`);
-      res.status(500).json({ error: "Server error occurred" });
+      next(new AppError("Server error occurred", 500));
     }
   }
 
@@ -76,14 +76,14 @@ export default class MentorController {
    * Fetch detailed information for a single mentor by ID.
    * Path param: id (mentor's MongoDB _id)
    */
-  static async getMentorByID(req, res) {
+  static async getMentorByID(req, res, next) {
     console.log("GET /mentors/:id is accessed");
 
     const mentorId = req.params.id;
 
     // Validate the objectId before querying
     if (!mongoose.Types.ObjectId.isValid(mentorId)) {
-      return res.status(400).json({ error: "Invalid mentor ID format." });
+      return next(new AppError("Invalid mentor ID format", 400));
     }
 
     try {
@@ -92,7 +92,9 @@ export default class MentorController {
 
       // If the mentor doesn't exist return not find
       if (!mentor) {
-        return res.status(400).json({ error: "Mentor doesn't exist." });
+        return next(
+          new AppError(`Mentor doesn't exist with Id: ${mentorId}`, 400),
+        );
       }
 
       // Prepare mentor info with only non-sensitive, relevant fields
@@ -125,8 +127,7 @@ export default class MentorController {
       // Respond with the mentor's public information
       res.status(200).json({ mentorInfo });
     } catch (err) {
-      console.log(`Error in getMentorByID: ${err}`);
-      res.status(500).json({ error: "Server error occurred" });
+      next(new AppError("Server error occurred", 500));
     }
   }
 }

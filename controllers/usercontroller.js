@@ -4,27 +4,28 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import config from "../config/config.js";
+import AppError from "../utils/AppError.js"; // Make sure this path is correct
 
 export default class UserController {
-  static async postNewUser(req, res) {
+  static async postNewUser(req, res, next) {
     console.log("POST /users is Accessed");
     const data = req.body;
 
-    // check if every user parameter is inserted
+    // Check if email is provided
     if (!data.email) {
-      return res.status(400).json({ error: "Missing email" });
+      return next(new AppError("Missing email", 400));
     }
-
+    // Check if name is provided
     if (!data.name) {
-      return res.status(400).json({ error: "Missing name" });
+      return next(new AppError("Missing name", 400));
     }
-
+    // Check if fatherName is provided
     if (!data.fatherName) {
-      return res.status(400).json({ error: "Missing fatherName" });
+      return next(new AppError("Missing fatherName", 400));
     }
-
+    // Check if password is provided
     if (!data.password) {
-      return res.status(400).json({ error: "Missing user password" });
+      return next(new AppError("Missing user password", 400));
     }
 
     // Validate the email
@@ -32,150 +33,113 @@ export default class UserController {
     //     return res.status(400).json({ error: 'Invalid Email'});
     // }
 
-    // find the user from the database and return error if it exists
     try {
+      // Check if user already exists
       const existingUser = await User.findOne({ email: data.email });
       if (existingUser) {
-        return res.status(400).json({ error: "user exists" });
+        return next(new AppError("user exists", 400));
       }
     } catch (err) {
-      console.log(`Error: ${err}`);
+      return next(new AppError("Database error", 500));
     }
 
-    // hash the password
+    // Hash the password
     data.password = await bcrypt.hash(data.password, 10);
 
-    // save the user to the data base
+    // Save the user to the database
     try {
       const newUser = new User(data);
       const insertInfo = await newUser.save();
-
       res.status(200).json({ email: insertInfo.email, id: insertInfo._id });
     } catch (err) {
-      console.log(`Error: ${err}`);
+      return next(new AppError("Database error", 500));
     }
   }
 
-  static async getUserById(req, res) {
+  static async getUserById(req, res, next) {
     console.log("GET /users/:id is Accessed");
-
-    // Get the id from request parameter
     const id = req.params.id;
 
-    // Validate the objectId before querying
+    // Check if the provided ID is valid
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).json({ error: "Invalid mentor ID format." });
+      return next(new AppError("Invalid mentor ID format.", 400));
     }
 
-    // retrieve the user from the data base
     try {
+      // Find user by ID
       const user = await User.findById(id);
-
-      // if there is no user with that id return Error
       if (!user) {
-        return res.status(400).json({ error: "user not found" });
+        return next(new AppError("user not found", 400));
       }
-
-      // remove the password from the user
+      // Remove password from user object
       const userWithOutPassword = user.toObject();
       delete userWithOutPassword.password;
-
-      // else send the user data
       res.status(200).json({ user: userWithOutPassword });
     } catch (err) {
-      console.log(`Error ${err}`);
-      res.status(500).json({ error: "server error occured" });
+      return next(new AppError("server error occurred", 500));
     }
   }
 
-  static async updateUserById(req, res) {
+  static async updateUserById(req, res, next) {
     console.log("PUT /users/:id is Accessed");
-
-    // get the Id
     const userid = req.params.id;
 
-    // first Check it if the user exists with data
     try {
+      // Find user by ID
       const user = await User.findById(userid);
-
-      // if there is no user with that id return Error
       if (!user) {
-        return res.status(404).json({ error: "user not found" });
+        return next(new AppError("user not found", 404));
       }
-
-      // get the update data
+      // Update user data
       const updateData = req.body;
-
-      // update the data
-      const updateInfo = await User.updateOne(
+      await User.updateOne(
         { _id: userid },
         { $set: updateData },
-        { upsert: false, runValidators: true } // upsert false forbids creation of new doc
-        // run validation on the update data
+        { upsert: false, runValidators: true },
       );
-
       res.status(200).json({ message: "user updated successfully" });
     } catch (err) {
-      console.log(`Error: ${err}`);
-      res.status(500).json({ error: "server error occurred" });
+      return next(new AppError("server error occurred", 500));
     }
   }
 
-  static async deleteById(req, res) {
+  static async deleteById(req, res, next) {
     console.log("DELETE /users/:id is Accessed");
-
-    // Get the Id
     const userid = req.params.id;
 
     try {
-      // Perform the delete operation
+      // Delete user by ID
       const result = await User.deleteOne({ _id: userid });
-
-      // Check if a document was deleted
       if (result.deletedCount === 0) {
-        // No document was deleted, meaning the ID was not found
-        return res.status(404).json({ error: "User not found" });
+        return next(new AppError("User not found", 404));
       }
-
-      // Document was deleted successfully
       res.status(200).json({ message: "User deleted successfully" });
     } catch (err) {
-      console.log(`Error: ${err}`);
-      res.status(500).json({ error: "Server error occurred" });
+      return next(new AppError("Server error occurred", 500));
     }
   }
 
-  static async userLogin(req, res) {
+  static async userLogin(req, res, next) {
     console.log("POST /users/login is Accessed");
-
-    // get the password and user email from the request body
     const reqEmail = req.body.email;
     const reqPassword = req.body.password;
 
-    // find the user from the database
     try {
+      // Find user by email
       const user = await User.findOne({ email: reqEmail });
-
-      // console.log(user);
-      // if user is null return not found error
       if (!user) {
-        return res.status(400).json({ error: "user not found" });
+        return next(new AppError("user not found", 400));
       }
-
-      // if user found compare the password with reqPassword by bcrypt
-      // if comparison passes respond login successful else incorrect password
+      // Compare provided password with stored hash
       if (!(await bcrypt.compare(reqPassword, user.password))) {
-        return res.status(400).json({ error: "incorrect password" });
+        return next(new AppError("incorrect password", 400));
       }
-
-      // create jwt ( access token)
+      // Generate JWT token
       const jwtpayload = { email: user.email };
-      const accessToken = jwt.sign(jwtpayload, config.jwtSecret); // is not set { expiresIn: '15m' }
-
+      const accessToken = jwt.sign(jwtpayload, config.jwtSecret);
       res.status(200).json({ message: "login successful", accessToken });
     } catch (err) {
-      console.log(`Error: ${err}`);
-      res.status(500).json({ error: "Server error occurred" });
+      return next(new AppError("Server error occurred", 500));
     }
   }
 }

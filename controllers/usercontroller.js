@@ -9,30 +9,7 @@ import AppError from "../utils/appError.js"; // Make sure this path is correct
 export default class UserController {
   static async postNewUser(req, res, next) {
     console.log("POST /users is Accessed");
-    const data = req.body;
-
-    // Check if email is provided
-    if (!data.email) {
-      return next(new AppError("Missing email", 400));
-    }
-    // Check if name is provided
-    if (!data.name) {
-      return next(new AppError("Missing name", 400));
-    }
-    // Check if fatherName is provided
-    if (!data.fatherName) {
-      return next(new AppError("Missing fatherName", 400));
-    }
-    // Check if password is provided
-    if (!data.password) {
-      return next(new AppError("Missing user password", 400));
-    }
-
-    // Validate the email
-    // if (!(validator.isEmail(data.email))) {
-    //     return res.status(400).json({ error: 'Invalid Email'});
-    // }
-
+    const data = req.cleanData;
     try {
       // Check if user already exists
       const existingUser = await User.findOne({ email: data.email });

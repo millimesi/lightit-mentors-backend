@@ -3,7 +3,7 @@ import MentorRequest from "../models/mentorRequest.js";
 import Mentor from "../models/mentor.js";
 import User from "../models/user.js";
 import mongoose from "mongoose";
-import AppError from "../utils/AppError.js";
+import AppError from "../utils/appError.js";
 
 export default class MentorRequestController {
   static async postMentorRequest(req, res, next) {

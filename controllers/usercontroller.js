@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import config from "../config/config.js";
-import AppError from "../utils/AppError.js"; // Make sure this path is correct
+import AppError from "../utils/appError.js"; // Make sure this path is correct
 
 export default class UserController {
   static async postNewUser(req, res, next) {

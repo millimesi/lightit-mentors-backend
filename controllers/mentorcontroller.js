@@ -2,7 +2,7 @@
 import DbClient from "../utils/db.js";
 import Mentor from "../models/mentor.js";
 import mongoose from "mongoose";
-import AppError from "../utils/AppError.js";
+import AppError from "../utils/appError.js";
 
 // Initialize the database client
 const db = new DbClient();

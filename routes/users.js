@@ -2,13 +2,14 @@ import express from "express";
 import UserController from "../controllers/usercontroller.js";
 import authenticateToken from "../utils/midlewares.js";
 import postNewUserValidators from "../validators/postNewUser.Validator.js";
+import postNewUserSanitizer from "../validators/postNewUser.Sanitizer.js";
 import validationHandler from "../middlewares/handleValidation.js";
 
 const router = express.Router();
 
 router.post(
   "/",
-  postNewUserValidators,
+  [...postNewUserSanitizer, ...postNewUserValidators],
   validationHandler,
   UserController.postNewUser,
 );

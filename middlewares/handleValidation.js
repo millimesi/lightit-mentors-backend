@@ -7,7 +7,7 @@ export default function validationHandler(req, res, next) {
     // Extract error message and format it in to list
     const extractedErrors = errors
       .array()
-      .map((err) => ({ [err.path]: `[${err.value}] is Invalid, ${err.msg}` }));
+      .map((err) => ({ field: err.path, message: err.msg }));
 
     const error = new AppError("Validation failed", 422);
     error.errors = extractedErrors; // Attach array of errors

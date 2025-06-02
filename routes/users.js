@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post(
   "/",
-  [...postNewUserSanitizer, ...postNewUserValidators],
+  [...postNewUserValidators, ...postNewUserSanitizer],
   validationHandler,
   UserController.postNewUser,
 );

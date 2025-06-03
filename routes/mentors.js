@@ -1,6 +1,6 @@
 import express from "express";
 import MentorController from "../controllers/mentorcontroller.js";
-import authenticateToken from "../utils/midlewares.js";
+import authenticateToken from "../middlewares/authenticateToken.js";
 
 const router = express.Router();
 

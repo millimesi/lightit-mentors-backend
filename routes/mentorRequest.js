@@ -1,6 +1,6 @@
 import express from "express";
 import MentorRequestController from "../controllers/mentorrequestcontroller.js";
-import authenticateToken from "../utils/midlewares.js";
+import authenticateToken from "../middlewares/authenticateToken.js";
 
 const router = express.Router();
 
@@ -11,7 +11,7 @@ router.post("/", authenticateToken, MentorRequestController.postMentorRequest);
 router.get(
   "/:id",
   authenticateToken,
-  MentorRequestController.getMentorRequestById
+  MentorRequestController.getMentorRequestById,
 );
 
 // Updates the mentor request details with id

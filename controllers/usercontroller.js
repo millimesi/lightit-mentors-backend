@@ -60,9 +60,6 @@ export default class UserController {
   static async updateUserById(req, res, next) {
     console.log("PUT /users/:id is Accessed");
     const userid = req.params.id;
-    console.log(req.params.id);
-
-    console.log(req.cleanData);
 
     try {
       // Find user by ID
@@ -86,8 +83,6 @@ export default class UserController {
 
       res.status(200).json({ message: "user updated successfully" });
     } catch (err) {
-      // console.log(err);
-
       return next(new AppError("server error occurred", 500));
     }
   }

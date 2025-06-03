@@ -4,6 +4,8 @@ import authenticateToken from "../utils/midlewares.js";
 import postNewUserValidators from "../validators/postNewUser.Validator.js";
 import postNewUserSanitizer from "../validators/postNewUser.Sanitizer.js";
 import validationHandler from "../middlewares/handleValidation.js";
+import idValidatorAndSanitizer from "../validators/id.ValidatorAndSanitizer.js";
+import updateUserByIdSanitizer from "../validators/updateUserById.Sanitizor.js";
 
 const router = express.Router();
 
@@ -21,7 +23,13 @@ router.post("/login", UserController.userLogin);
 router.get("/:id", authenticateToken, UserController.getUserById);
 
 // updates the user account with specific id
-router.put("/:id", authenticateToken, UserController.updateUserById);
+router.put(
+  "/:id",
+  [...idValidatorAndSanitizer, ...updateUserByIdSanitizer],
+  validationHandler,
+  authenticateToken,
+  UserController.updateUserById,
+);
 
 // deletes the user account
 router.delete("/:id", authenticateToken, UserController.deleteById);

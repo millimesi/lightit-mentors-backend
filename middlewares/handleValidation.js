@@ -13,6 +13,12 @@ export default function validationHandler(req, res, next) {
     error.errors = extractedErrors; // Attach array of errors
     return next(error);
   }
-  req.cleanData = matchedData(req); // Get validated and sanitized data only
+
+  const cleanData = matchedData(req); // Get validated and sanitized data only
+
+  // Remove Id from CleanData
+  if (cleanData.id) delete cleanData.id;
+
+  req.cleanData = cleanData;
   next();
 }

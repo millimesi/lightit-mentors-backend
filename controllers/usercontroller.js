@@ -60,6 +60,9 @@ export default class UserController {
   static async updateUserById(req, res, next) {
     console.log("PUT /users/:id is Accessed");
     const userid = req.params.id;
+    console.log(req.params.id);
+
+    console.log(req.cleanData);
 
     try {
       // Find user by ID
@@ -68,14 +71,23 @@ export default class UserController {
         return next(new AppError("user not found", 404));
       }
       // Update user data
-      const updateData = req.body;
-      await User.updateOne(
-        { _id: userid },
-        { $set: updateData },
-        { upsert: false, runValidators: true },
-      );
+      const updateData = req.cleanData;
+
+      // Check if there is anything to update
+      if (Object.keys(updateData).length > 0) {
+        await User.updateOne(
+          { _id: userid },
+          { $set: updateData },
+          { upsert: false, runValidators: true },
+        );
+      } else {
+        return next(new AppError("No data provided for update", 400));
+      }
+
       res.status(200).json({ message: "user updated successfully" });
     } catch (err) {
+      // console.log(err);
+
       return next(new AppError("server error occurred", 500));
     }
   }

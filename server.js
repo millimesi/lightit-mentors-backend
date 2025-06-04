@@ -4,8 +4,12 @@ import usersRouter from "./routes/users.js";
 import mentorsRouter from "./routes/mentors.js";
 import mentorRequestRouter from "./routes/mentorRequest.js";
 import errorHandler from "./middlewares/errorMiddleware.js";
+import helmet from "helmet";
 
 const api = express();
+
+// Apply helmet middleware globally
+api.use(helmet());
 
 // Add request body json parser
 api.use(express.json());

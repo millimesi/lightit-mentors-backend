@@ -3,6 +3,7 @@ import * as fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
+import logger from "./logger.js";
 
 // Get url and directory to this config file
 const currentFileName = fileURLToPath(import.meta.url);
@@ -15,7 +16,7 @@ const envPath = path.resolve(currentDirName, `../../.env.${NODE_ENV}`);
 // Check if the .env file is exists and config it
 if (fs.existsSync(envPath)) {
   dotenv.config({ path: envPath });
-  console.log(`✅ Loaded environment: ${NODE_ENV}`);
+  logger.info(`✅ Loaded environment: ${NODE_ENV}`);
 } else {
   throw new Error(`❌ .env file is not found: ${envPath}`);
 }

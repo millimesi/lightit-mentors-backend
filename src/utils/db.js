@@ -1,4 +1,5 @@
 // Database connection and management
+import logger from "../config/logger.js";
 import mongoose from "mongoose";
 import Mentor from "../models/mentor.js";
 import config from "../config/config.js";
@@ -12,20 +13,20 @@ export default class DbClient {
     mongoose
       .connect(dbUrl)
       .then(() => {
-        console.log(`✅ Database connection is established`);
+        logger.info(`✅ Database connection is established`);
       })
-      .catch((error) => console.log(`Connection Error: ${error}`));
+      .catch((error) => logger.error(`Connection Error: ${error}`));
 
     // Close the connection when the program is terminated
     process.on("SIGINT", async () => {
       try {
         await mongoose.connection.close();
-        console.log(
+        logger.info(
           "Database connection is closed due to program termination!",
         );
         process.exit(0);
       } catch (err) {
-        console.error(`Error closing the database connection: ${err}`);
+        logger.error(`Error closing the database connection: ${err}`);
         process.exit(1);
       }
     });

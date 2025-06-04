@@ -31,5 +31,5 @@ api.use("/mentor_request", mentorRequestRouter);
 api.use(errorHandler);
 
 api.listen(config.port, () => {
-  console.log(`✅ API server is listening on port: ${config.port}`);
+  logger.info(`✅ API server is listening on port: ${config.port}`);
 });

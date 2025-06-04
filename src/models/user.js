@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
@@ -19,8 +19,8 @@ const userSchema = new Schema(
     phoneNumber: { type: String },
   },
   { timestamps: true }, // Automatically adds createdAt and updatedAt time stam
-  { versionKey: '__v' }, // Automatical creates and update version of the schema
+  { versionKey: "__v" }, // Automatical creates and update version of the schema
 );
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 export default User;

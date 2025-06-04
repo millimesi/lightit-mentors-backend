@@ -37,7 +37,7 @@ const mentorRequestSchema = new Schema(
     },
   },
   { timestamps: true }, // Automatically adds createdAt and updatedAt time stamp
-  { versionKey: "__v" } // Automatically creates and update version of the schema
+  { versionKey: "__v" }, // Automatically creates and update version of the schema
 );
 
 const MentorRequest = mongoose.model("MentorRequest", mentorRequestSchema);

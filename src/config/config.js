@@ -10,7 +10,7 @@ const currentDirName = path.dirname(currentFileName);
 
 // Get the app environment from process and state the location of the .env file
 const NODE_ENV = process.env.NODE_ENV || "development";
-const envPath = path.resolve(currentDirName, `../.env.${NODE_ENV}`);
+const envPath = path.resolve(currentDirName, `../../.env.${NODE_ENV}`);
 
 // Check if the .env file is exists and config it
 if (fs.existsSync(envPath)) {

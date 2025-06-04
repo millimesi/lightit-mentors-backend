@@ -13,7 +13,7 @@ const ratingDetailSchema = new Schema(
     fourStar: { type: Number, default: 0 },
     fiveStar: { type: Number, default: 0 },
   },
-  { _id: false }
+  { _id: false },
 );
 
 /**
@@ -24,7 +24,7 @@ const ratingSchema = new Schema(
     roundedAverage: { type: Number, default: 0 },
     ratingDetail: { type: ratingDetailSchema, default: () => ({}) },
   },
-  { _id: false }
+  { _id: false },
 );
 
 /**
@@ -36,7 +36,7 @@ const reviewSchema = new Schema(
     comment: { type: String, default: "" },
     rating: { type: Number, default: 0 },
   },
-  { _id: false }
+  { _id: false },
 );
 
 /**
@@ -47,7 +47,7 @@ const trainingAndCertificationSchema = new Schema(
     status: { type: Boolean, default: false },
     trainer: { type: String, default: null },
   },
-  { _id: false }
+  { _id: false },
 );
 
 /**
@@ -83,7 +83,7 @@ const mentorSchema = new Schema(
     password: { type: String, required: true }, // Hashed password
     phoneNumber: { type: String, required: true, unique: true }, // Contact phone number
   },
-  { timestamps: true, versionKey: "__v" }
+  { timestamps: true, versionKey: "__v" },
 );
 
 // Export the Mentor model for use in the application.

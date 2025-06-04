@@ -21,7 +21,7 @@ export default class DbClient {
       try {
         await mongoose.connection.close();
         console.log(
-          "Database connection is closed due to program termination!"
+          "Database connection is closed due to program termination!",
         );
         process.exit(0);
       } catch (err) {

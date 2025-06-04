@@ -9,7 +9,7 @@ const currentFileName = fileURLToPath(import.meta.url);
 const currentDirName = path.dirname(currentFileName);
 
 // Ensure logs folder exists
-const logDir = path.resolve(currentDirName, "../logs");
+const logDir = path.resolve(currentDirName, "../../logs");
 if (!fs.existsSync(logDir)) {
   fs.mkdirSync(logDir);
 }
@@ -82,8 +82,8 @@ const logger = winston.createLogger({
     winston.format.json(),
   ),
   transports: [combinedTransport, errorTransport, consoleTransport],
-  exceptionHandlers: [uncaughtTransport],
-  rejectionHandlers: [rejectionTransport],
+  exceptionHandlers: [uncaughtTransport, consoleTransport],
+  rejectionHandlers: [rejectionTransport, consoleTransport],
 });
 
 // Stream for morgan (request logging)

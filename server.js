@@ -1,12 +1,17 @@
 import express from "express";
-import config from "./config/config.js";
-import usersRouter from "./routes/users.js";
-import mentorsRouter from "./routes/mentors.js";
-import mentorRequestRouter from "./routes/mentorRequest.js";
-import errorHandler from "./middlewares/errorMiddleware.js";
+import morgan from "morgan";
+import logger from "./src/config/logger.js";
+import config from "./src/config/config.js";
+import usersRouter from "./src/routes/users.js";
+import mentorsRouter from "./src/routes/mentors.js";
+import mentorRequestRouter from "./src/routes/mentorRequest.js";
+import errorHandler from "./src/middlewares/errorMiddleware.js";
 import helmet from "helmet";
 
 const api = express();
+
+// http logger
+api.use(morgan("combined", { stream: logger.stream }));
 
 // Apply helmet middleware globally
 api.use(helmet());

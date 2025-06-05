@@ -7,7 +7,7 @@ import config from "../config/config.js";
 export default class DbClient {
   constructor() {
     // Set database url parameters
-    const dbUrl = `mongodb://${config.dbHost}:${config.dbPort}/${config.dbName}`;
+    const dbUrl = `mongodb://${config.dbUser}:${config.dbPassword}@${config.dbHost}:${config.dbPort}/${config.dbName}?authSource=${config.dbAuthSource}`;
 
     // Connect to the data base
     mongoose

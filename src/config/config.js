@@ -29,5 +29,7 @@ export default {
   dbHost: process.env.DB_HOST,
   dbPort: process.env.DB_PORT,
   dbName: process.env.DB_NAME,
-  logLevel: process.env.LOG_LEVEL,
+  dbUser: process.env.DB_USER,
+  dbPassword: process.env.DB_PASSWORD,
+  dbAuthSource: process.env.DB_AUTHSOURCE,
 };

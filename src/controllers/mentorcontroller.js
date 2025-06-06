@@ -18,8 +18,6 @@ export default class MentorController {
    * Query params: page (number), limit (number)
    */
   static async getMentors(req, res, next) {
-    console.log("GET /mentors is accessed");
-
     try {
       // Parse pagination parameters with defaults
       const page = parseInt(req.query.page) || 1;
@@ -77,8 +75,6 @@ export default class MentorController {
    * Path param: id (mentor's MongoDB _id)
    */
   static async getMentorByID(req, res, next) {
-    console.log("GET /mentors/:id is accessed");
-
     const mentorId = req.params.id;
 
     // Validate the objectId before querying

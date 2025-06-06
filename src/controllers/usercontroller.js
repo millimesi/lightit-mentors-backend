@@ -8,7 +8,6 @@ import AppError from "../utils/appError.js"; // Make sure this path is correct
 
 export default class UserController {
   static async postNewUser(req, res, next) {
-    console.log("POST /users is Accessed");
     const data = req.cleanData;
     try {
       // Check if user already exists
@@ -34,7 +33,6 @@ export default class UserController {
   }
 
   static async getUserById(req, res, next) {
-    console.log("GET /users/:id is Accessed");
     const id = req.params.id;
 
     // Check if the provided ID is valid
@@ -58,7 +56,6 @@ export default class UserController {
   }
 
   static async updateUserById(req, res, next) {
-    console.log("PUT /users/:id is Accessed");
     const userid = req.params.id;
 
     try {
@@ -88,7 +85,6 @@ export default class UserController {
   }
 
   static async deleteById(req, res, next) {
-    console.log("DELETE /users/:id is Accessed");
     const userid = req.params.id;
 
     try {
@@ -104,7 +100,6 @@ export default class UserController {
   }
 
   static async userLogin(req, res, next) {
-    console.log("POST /users/login is Accessed");
     const reqEmail = req.body.email;
     const reqPassword = req.body.password;
 

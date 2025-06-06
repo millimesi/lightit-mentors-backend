@@ -7,8 +7,6 @@ import AppError from "../utils/appError.js";
 
 export default class MentorRequestController {
   static async postMentorRequest(req, res, next) {
-    console.log("Post /mentor_request is Accessed");
-
     // Get the request data
     const mentorId = req.body.mentorId || null;
     const userId = req.body.userId || null;
@@ -71,11 +69,8 @@ export default class MentorRequestController {
   }
 
   static async getMentorRequestById(req, res, next) {
-    console.log("Get /mentor_request/:id is Accessed");
-
     // Get the id
     const requestId = req.params.id;
-
     // Validate the objectId before querying
     if (!mongoose.Types.ObjectId.isValid(requestId)) {
       return next(new AppError("Invalid mentor ID format", 400));
@@ -102,10 +97,7 @@ export default class MentorRequestController {
   }
 
   static async processRequestStatus(req, res, next) {
-    console.log("PUT /mentor_request/:id/:status is Accessed");
-
     const { id, status } = req.params;
-
     // Validate status value
     if (status !== "accepted" && status !== "rejected") {
       return next(new AppError("Invalid status", 400));

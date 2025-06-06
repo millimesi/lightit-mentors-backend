@@ -1,11 +1,7 @@
 // Mentor endpoints controller
-import DbClient from "../utils/db.js";
 import Mentor from "../models/mentor.js";
 import mongoose from "mongoose";
 import AppError from "../utils/appError.js";
-
-// Initialize the database client
-const db = new DbClient();
 
 /**
  * @description Controller class for mentor-related endpoints.
@@ -21,13 +17,29 @@ export default class MentorController {
     try {
       // Parse pagination parameters with defaults
       const page = parseInt(req.query.page) || 1;
-      const limit = parseInt(req.query.limit) || 3;
+      const limit = parseInt(req.query.limit) || 5;
 
-      // Get total number of mentors for pagination info
-      const totalNumOfMentors = await db.nbMentors();
+      // Get user role
+      const isAdmin = true; // Admin features are not yet applied
+
+      // Prepare database filter object
+      const filter = {};
+
+      // Currently the logic is if the user is admin get every list
+      // But is the user is  not admin just get only isVisible=true mentors
+      if (!isAdmin) {
+        filter.isVisible = true;
+      }
 
       // Fetch paginated and sorted list of mentors from the database
-      const listOfMentors = await db.getListOfMentors(page, limit);
+      const skip = (page - 1) * limit;
+      const listOfMentors = await Mentor.find(filter)
+        .sort({ numberOfMentee: 1 })
+        .skip(skip)
+        .limit(limit);
+
+      // Get total number of mentors for pagination info
+      const totalNumOfMentors = await Mentor.countDocuments(filter);
 
       // Prepare mentor list with only non-sensitive, relevant fields
       let mentorList = [];
@@ -63,9 +75,15 @@ export default class MentorController {
       }
 
       // Respond with total count and filtered mentor list
-      res.status(200).json({ totalNumOfMentors, mentorList });
+      const response = {
+        page,
+        totalPage: Math.ceil(totalNumOfMentors / limit),
+        mentorList,
+      };
+
+      res.status(200).json(response);
     } catch (err) {
-      next(new AppError("Server error occurred", 500));
+      return next(err);
     }
   }
 
@@ -123,7 +141,7 @@ export default class MentorController {
       // Respond with the mentor's public information
       res.status(200).json({ mentorInfo });
     } catch (err) {
-      next(new AppError("Server error occurred", 500));
+      return next(err); // Safest and most common pattern
     }
   }
 }

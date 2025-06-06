@@ -10,10 +10,10 @@ export default function errorHandler(err, req, res, _next) {
     if (err.errors) {
       response.errors = err.errors;
     }
-    res.status(err.statusCode).json(response);
+    return res.status(err.statusCode).json(response);
   } else {
     // Unknown or program error: don't like details
-    logger.error("💥CRITICAL ERROR", err);
+    logger.error("💥CRITICAL ERROR:", err);
     res.status(500).json({
       status: "error",
       message: "Something went very wrong",

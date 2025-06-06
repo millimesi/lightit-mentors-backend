@@ -20,7 +20,7 @@ export default class MentorController {
       const limit = parseInt(req.query.limit) || 5;
 
       // Get user role
-      const isAdmin = true; // Admin features are not yet applied
+      const isAdmin = false; // Admin features are not yet applied
 
       // Prepare database filter object
       const filter = {};

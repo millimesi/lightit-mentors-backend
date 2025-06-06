@@ -64,7 +64,7 @@ export default class MentorRequestController {
         status: insertInfo.status,
       });
     } catch (err) {
-      return next(new AppError("Server error occurred", 500));
+      return next();
     }
   }
 

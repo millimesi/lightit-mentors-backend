@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import DbClient from "./src/utils/db.js";
 import logger from "./src/config/logger.js";
 import config from "./src/config/config.js";
 import usersRouter from "./src/routes/users.js";
@@ -31,5 +32,7 @@ api.use("/mentor_request", mentorRequestRouter);
 api.use(errorHandler);
 
 api.listen(config.port, () => {
+  // Initialize the data base
+  new DbClient();
   logger.info(`✅ API server is listening on port: ${config.port}`);
 });

@@ -6,9 +6,13 @@ import mentorsRouter from "./src/routes/mentors.js";
 import mentorRequestRouter from "./src/routes/mentorRequest.js";
 import errorHandler from "./src/middlewares/errorMiddleware.js";
 import helmet from "helmet";
+import cors from "cors";
 import startServer from "./src/server/startServer.js";
 
 const api = express();
+
+// Enable CORS for all routes
+api.use(cors());
 
 // http logger
 api.use(morgan("combined", { stream: logger.stream }));

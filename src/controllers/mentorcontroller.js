@@ -50,16 +50,14 @@ export default class MentorController {
           sex: mentor.sex,
           name: mentor.name,
           fatherName: mentor.fatherName,
-          profileImage: mentor.profileImage
-            ? `http://localhost:5000/profileImage/${mentor.profileImage}`
-            : null,
+          profileImage: mentor.profileImage ? `?${mentor.profileImage}` : null,
           gradeBand: mentor.gradeBand,
           mentoringMode: mentor.mentoringMode,
           city: mentor.city,
           about: mentor.about,
           education: mentor.education,
           WorkExperience: mentor.WorkExperience,
-          LifePhilosophy: mentor.LifePhilosophy,
+          lifePhilosophy: mentor.lifePhilosophy,
           rating: mentor.rating,
           review: mentor.review,
           trainingAndCertification: mentor.trainingAndCertification,

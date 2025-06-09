@@ -67,7 +67,7 @@ const mentorSchema = new Schema(
     about: { type: String, default: "" }, // Mentor's bio/description
     education: { type: [String], default: [] }, // Educational background
     WorkExperience: { type: [String], default: [] }, // Work experience entries
-    LifePhilosophy: { type: String, default: "" }, // Mentor's life philosophy
+    lifePhilosophy: { type: String, default: "" }, // Mentor's life philosophy
     rating: { type: ratingSchema, default: () => ({}) }, // Rating details
     review: { type: [reviewSchema], default: [] }, // Array of reviews
     trainingAndCertification: {

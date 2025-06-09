@@ -1,18 +1,11 @@
 [
   {
-    "id": 1,
     "sex": "Male",
     "name": "Million",
     "fatherName": "Meseret",
     "profileImage": "Path",
-    "gradeBand": [
-      "9-10",
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["9-10", "11-12"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "I am a dedicated educator, engineer, and entrepreneur with a passion for empowering the next generation through knowledge and mentorship. With a strong academic background in mechanical systems and software engineering, I strive to bridge the gap between technical expertise and societal needs. My work focuses on nurturing young minds, building innovative solutions, and leading impactful community projects. Through Light It PLC, I aim to inspire, guide, and transform lives with faith, resilience, and determination.",
     "education": [
@@ -58,29 +51,19 @@
       "Mechanical System Design",
       "Web development"
     ],
-    "category": [
-      "Acadamic Tutor",
-      "Life Skill Mentor"
-    ],
+    "category": ["Acadamic Tutor", "Life Skill Mentor"],
     "price": 300,
     "email": "million.meseret1@example.com",
     "password": "1234",
     "phoneNumber": "+251911000001"
   },
   {
-    "id": 2,
     "sex": "Female",
     "name": "Hana",
     "fatherName": "Tesfaye",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4",
-      "5-8"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["Kg-4", "5-8"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "Educator and researcher",
     "education": [
@@ -116,43 +99,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Public speaking",
-      "Writing",
-      "Mentoring"
-    ],
-    "category": [
-      "Acadamic Tutor"
-    ],
+    "skillAndTalent": ["Public speaking", "Writing", "Mentoring"],
+    "category": ["Acadamic Tutor"],
     "price": 250,
     "email": "hana.tesfaye2@example.com",
     "password": "1234",
     "phoneNumber": "+251911000002"
   },
   {
-    "id": 3,
     "name": "Samuel",
     "sex": "Male",
     "fatherName": "Berhanu",
     "profileImage": "Path",
-    "gradeBand": [
-      "9-10",
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["9-10", "11-12"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "Tech enthusiast and full-stack developer",
-    "education": [
-      "BSc in Computer Science",
-      "Certified MERN Stack Developer"
-    ],
-    "WorkExperience": [
-      "Developer at AndegnaTech",
-      "Freelancer"
-    ],
+    "education": ["BSc in Computer Science", "Certified MERN Stack Developer"],
+    "WorkExperience": ["Developer at AndegnaTech", "Freelancer"],
     "lifePhilosophy": "Code. Debug. Repeat.",
     "rating": {
       "roundedAverage": 3,
@@ -177,45 +141,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Web development",
-      "Problem solving",
-      "Music"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Art Mentor"
-    ],
+    "skillAndTalent": ["Web development", "Problem solving", "Music"],
+    "category": ["Acadamic Tutor", "Art Mentor"],
     "price": 250,
     "email": "samuel.berhanu3@example.com",
     "password": "1234",
     "phoneNumber": "+251911000003"
   },
   {
-    "id": 4,
     "name": "Sara",
     "sex": "Female",
     "fatherName": "Abebe",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4",
-      "5-8",
-      "9-10"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["Kg-4", "5-8", "9-10"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "Mentor in life coaching",
-    "education": [
-      "Certified Life Coach",
-      "BA in Psychology"
-    ],
-    "WorkExperience": [
-      "Independent Life Coach",
-      "Volunteer Counselor"
-    ],
+    "education": ["Certified Life Coach", "BA in Psychology"],
+    "WorkExperience": ["Independent Life Coach", "Volunteer Counselor"],
     "lifePhilosophy": "Live with purpose and clarity.",
     "rating": {
       "roundedAverage": 4,
@@ -240,40 +183,23 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Empathy",
-      "Storytelling",
-      "Guided meditation"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Story Writing Mentor"
-    ],
+    "skillAndTalent": ["Empathy", "Storytelling", "Guided meditation"],
+    "category": ["Acadamic Tutor", "Story Writing Mentor"],
     "price": 200,
     "email": "sara.abebe4@example.com",
     "password": "1234",
     "phoneNumber": "+251911000004"
   },
   {
-    "id": 5,
     "sex": "Female",
     "name": "Abel",
     "fatherName": "Solomon",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4",
-      "5-8"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["Kg-4", "5-8"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "Finance specialist with a tech twist",
-    "education": [
-      "MBA in Finance",
-      "BSc in Information Systems"
-    ],
+    "education": ["MBA in Finance", "BSc in Information Systems"],
     "WorkExperience": [
       "Financial Analyst at EthioBank",
       "Data Analyst at TechnoEdge"
@@ -302,34 +228,20 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Excel modeling",
-      "Budget planning"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Music Mentor"
-    ],
+    "skillAndTalent": ["Excel modeling", "Budget planning"],
+    "category": ["Acadamic Tutor", "Music Mentor"],
     "price": 200,
     "email": "abel.solomon5@example.com",
     "password": "1234",
     "phoneNumber": "+251911000005"
   },
   {
-    "id": 6,
     "name": "Mekdes",
     "sex": "Female",
     "fatherName": "Teshome",
     "profileImage": "Path",
-    "gradeBand": [
-      "5-8",
-      "9-10",
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["5-8", "9-10", "11-12"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "STEM education advocate and robotics coach",
     "education": [
@@ -364,40 +276,23 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Robotics",
-      "Public speaking",
-      "Mentoring"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Technology Mentor"
-    ],
+    "skillAndTalent": ["Robotics", "Public speaking", "Mentoring"],
+    "category": ["Acadamic Tutor", "Technology Mentor"],
     "price": 250,
     "email": "mekdes.teshome6@example.com",
     "password": "1234",
     "phoneNumber": "+251911000006"
   },
   {
-    "id": 7,
     "sex": "Male",
     "name": "Getahun",
     "fatherName": "Alemayehu",
     "profileImage": "Path",
-    "gradeBand": [
-      "9-10",
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["9-10", "11-12"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Addis Ababa",
     "about": "Physics teacher and science communicator.",
-    "education": [
-      "MSc in Physics",
-      "BSc in Physics"
-    ],
+    "education": ["MSc in Physics", "BSc in Physics"],
     "WorkExperience": [
       "Teacher at St. Joseph School",
       "Science Fair Organizer"
@@ -426,40 +321,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Physics experiments",
-      "Public speaking"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Science Mentor"
-    ],
+    "skillAndTalent": ["Physics experiments", "Public speaking"],
+    "category": ["Acadamic Tutor", "Science Mentor"],
     "price": 220,
     "email": "getahun.alemayehu7@example.com",
     "password": "1234",
     "phoneNumber": "+251911000007"
   },
   {
-    "id": 8,
     "sex": "Female",
     "name": "Lily",
     "fatherName": "Kebede",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4",
-      "5-8"
-    ],
-    "mentoringMode": [
-      "online"
-    ],
+    "gradeBand": ["Kg-4", "5-8"],
+    "mentoringMode": ["online"],
     "city": "Hawassa",
     "about": "Passionate about early childhood education.",
-    "education": [
-      "BA in Early Childhood Education"
-    ],
-    "WorkExperience": [
-      "Kindergarten Teacher at Hawassa Model School"
-    ],
+    "education": ["BA in Early Childhood Education"],
+    "WorkExperience": ["Kindergarten Teacher at Hawassa Model School"],
     "lifePhilosophy": "Every child is a different kind of flower.",
     "rating": {
       "roundedAverage": 5,
@@ -484,39 +363,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Storytelling",
-      "Drawing"
-    ],
-    "category": [
-      "Acadamic Tutor"
-    ],
+    "skillAndTalent": ["Storytelling", "Drawing"],
+    "category": ["Acadamic Tutor"],
     "price": 180,
     "email": "lily.kebede8@example.com",
     "password": "1234",
     "phoneNumber": "+251911000008"
   },
   {
-    "id": 9,
     "sex": "Male",
     "name": "Brook",
     "fatherName": "Haile",
     "profileImage": "Path",
-    "gradeBand": [
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person"
-    ],
+    "gradeBand": ["11-12"],
+    "mentoringMode": ["In-Person"],
     "city": "Bahir Dar",
     "about": "Mathematics enthusiast and Olympiad coach.",
-    "education": [
-      "BSc in Mathematics"
-    ],
-    "WorkExperience": [
-      "Math Olympiad Coach",
-      "High School Math Teacher"
-    ],
+    "education": ["BSc in Mathematics"],
+    "WorkExperience": ["Math Olympiad Coach", "High School Math Teacher"],
     "lifePhilosophy": "Mathematics is the language of the universe.",
     "rating": {
       "roundedAverage": 4,
@@ -541,37 +405,23 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Problem solving",
-      "Math games"
-    ],
-    "category": [
-      "Acadamic Tutor"
-    ],
+    "skillAndTalent": ["Problem solving", "Math games"],
+    "category": ["Acadamic Tutor"],
     "price": 230,
     "email": "brook.haile9@example.com",
     "password": "1234",
     "phoneNumber": "+251911000009"
   },
   {
-    "id": 10,
     "sex": "Female",
     "name": "Ruth",
     "fatherName": "Mekonnen",
     "profileImage": "Path",
-    "gradeBand": [
-      "5-8",
-      "9-10"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["5-8", "9-10"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Adama",
     "about": "English language mentor and debate coach.",
-    "education": [
-      "BA in English Literature"
-    ],
+    "education": ["BA in English Literature"],
     "WorkExperience": [
       "English Teacher at Adama High School",
       "Debate Club Coordinator"
@@ -600,39 +450,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Debate",
-      "Essay writing"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Language Mentor"
-    ],
+    "skillAndTalent": ["Debate", "Essay writing"],
+    "category": ["Acadamic Tutor", "Language Mentor"],
     "price": 210,
     "email": "ruth.mekonnen10@example.com",
     "password": "1234",
     "phoneNumber": "+251911000010"
   },
   {
-    "id": 11,
     "sex": "Male",
     "name": "Yonas",
     "fatherName": "Gebre",
     "profileImage": "Path",
-    "gradeBand": [
-      "9-10"
-    ],
-    "mentoringMode": [
-      "online"
-    ],
+    "gradeBand": ["9-10"],
+    "mentoringMode": ["online"],
     "city": "Dire Dawa",
     "about": "Chemistry teacher with a love for experiments.",
-    "education": [
-      "BSc in Chemistry"
-    ],
-    "WorkExperience": [
-      "Chemistry Teacher at Dire Dawa Secondary School"
-    ],
+    "education": ["BSc in Chemistry"],
+    "WorkExperience": ["Chemistry Teacher at Dire Dawa Secondary School"],
     "lifePhilosophy": "Experiment, learn, repeat.",
     "rating": {
       "roundedAverage": 3,
@@ -657,39 +492,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Lab experiments",
-      "Science fairs"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Science Mentor"
-    ],
+    "skillAndTalent": ["Lab experiments", "Science fairs"],
+    "category": ["Acadamic Tutor", "Science Mentor"],
     "price": 190,
     "email": "yonas.gebre11@example.com",
     "password": "1234",
     "phoneNumber": "+251911000011"
   },
   {
-    "id": 12,
     "sex": "Female",
     "name": "Helen",
     "fatherName": "Tadesse",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4"
-    ],
-    "mentoringMode": [
-      "In-Person"
-    ],
+    "gradeBand": ["Kg-4"],
+    "mentoringMode": ["In-Person"],
     "city": "Gondar",
     "about": "Specialist in creative arts for children.",
-    "education": [
-      "BA in Fine Arts"
-    ],
-    "WorkExperience": [
-      "Art Teacher at Gondar Primary School"
-    ],
+    "education": ["BA in Fine Arts"],
+    "WorkExperience": ["Art Teacher at Gondar Primary School"],
     "lifePhilosophy": "Creativity is intelligence having fun.",
     "rating": {
       "roundedAverage": 5,
@@ -714,41 +534,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Painting",
-      "Crafts"
-    ],
-    "category": [
-      "Art Mentor"
-    ],
+    "skillAndTalent": ["Painting", "Crafts"],
+    "category": ["Art Mentor"],
     "price": 170,
     "email": "helen.tadesse12@example.com",
     "password": "1234",
     "phoneNumber": "+251911000012"
   },
   {
-    "id": 13,
     "sex": "Male",
     "name": "Dawit",
     "fatherName": "Solomon",
     "profileImage": "Path",
-    "gradeBand": [
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["11-12"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Jimma",
     "about": "Economics lecturer and business mentor.",
-    "education": [
-      "MSc in Economics",
-      "BSc in Business Administration"
-    ],
-    "WorkExperience": [
-      "Lecturer at Jimma University",
-      "Business Consultant"
-    ],
+    "education": ["MSc in Economics", "BSc in Business Administration"],
+    "WorkExperience": ["Lecturer at Jimma University", "Business Consultant"],
     "lifePhilosophy": "Opportunities are created, not found.",
     "rating": {
       "roundedAverage": 4,
@@ -773,41 +576,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Business planning",
-      "Economics"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Business Mentor"
-    ],
+    "skillAndTalent": ["Business planning", "Economics"],
+    "category": ["Acadamic Tutor", "Business Mentor"],
     "price": 260,
     "email": "dawit.solomon13@example.com",
     "password": "1234",
     "phoneNumber": "+251911000013"
   },
   {
-    "id": 14,
     "sex": "Female",
     "name": "Rahel",
     "fatherName": "Mulugeta",
     "profileImage": "Path",
-    "gradeBand": [
-      "5-8",
-      "9-10"
-    ],
-    "mentoringMode": [
-      "online"
-    ],
+    "gradeBand": ["5-8", "9-10"],
+    "mentoringMode": ["online"],
     "city": "Mekelle",
     "about": "Mentor in environmental science and sustainability.",
-    "education": [
-      "MSc in Environmental Science"
-    ],
-    "WorkExperience": [
-      "Environmental Consultant",
-      "Teacher at Green School"
-    ],
+    "education": ["MSc in Environmental Science"],
+    "WorkExperience": ["Environmental Consultant", "Teacher at Green School"],
     "lifePhilosophy": "Protect the earth for future generations.",
     "rating": {
       "roundedAverage": 4,
@@ -832,40 +618,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Project management",
-      "Public speaking"
-    ],
-    "category": [
-      "Science Mentor"
-    ],
+    "skillAndTalent": ["Project management", "Public speaking"],
+    "category": ["Science Mentor"],
     "price": 210,
     "email": "rahel.mulugeta14@example.com",
     "password": "1234",
     "phoneNumber": "+251911000014"
   },
   {
-    "id": 15,
     "sex": "Male",
     "name": "Mulu",
     "fatherName": "Tsegaye",
     "profileImage": "Path",
-    "gradeBand": [
-      "9-10",
-      "11-12"
-    ],
-    "mentoringMode": [
-      "In-Person"
-    ],
+    "gradeBand": ["9-10", "11-12"],
+    "mentoringMode": ["In-Person"],
     "city": "Adigrat",
     "about": "History teacher and cultural heritage guide.",
-    "education": [
-      "BA in History"
-    ],
-    "WorkExperience": [
-      "History Teacher at Adigrat High School",
-      "Tour Guide"
-    ],
+    "education": ["BA in History"],
+    "WorkExperience": ["History Teacher at Adigrat High School", "Tour Guide"],
     "lifePhilosophy": "Learn from the past to shape the future.",
     "rating": {
       "roundedAverage": 3,
@@ -890,38 +660,23 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Storytelling",
-      "Guiding"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "History Mentor"
-    ],
+    "skillAndTalent": ["Storytelling", "Guiding"],
+    "category": ["Acadamic Tutor", "History Mentor"],
     "price": 200,
     "email": "mulu.tsegaye15@example.com",
     "password": "1234",
     "phoneNumber": "+251911000015"
   },
   {
-    "id": 16,
     "sex": "Female",
     "name": "Sofia",
     "fatherName": "Abdisa",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4",
-      "5-8"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["Kg-4", "5-8"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Assosa",
     "about": "Music teacher and choir director.",
-    "education": [
-      "BA in Music"
-    ],
+    "education": ["BA in Music"],
     "WorkExperience": [
       "Music Teacher at Assosa Primary School",
       "Choir Director"
@@ -950,39 +705,23 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Singing",
-      "Piano",
-      "Conducting"
-    ],
-    "category": [
-      "Music Mentor"
-    ],
+    "skillAndTalent": ["Singing", "Piano", "Conducting"],
+    "category": ["Music Mentor"],
     "price": 220,
     "email": "sofia.abdisa16@example.com",
     "password": "1234",
     "phoneNumber": "+251911000016"
   },
   {
-    "id": 17,
     "sex": "Male",
     "name": "Fitsum",
     "fatherName": "Kassa",
     "profileImage": "Path",
-    "gradeBand": [
-      "5-8",
-      "9-10"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["5-8", "9-10"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Debre Markos",
     "about": "Biology teacher and environmental activist.",
-    "education": [
-      "BSc in Biology",
-      "Diploma in Environmental Studies"
-    ],
+    "education": ["BSc in Biology", "Diploma in Environmental Studies"],
     "WorkExperience": [
       "Biology Teacher at Debre Markos School",
       "NGO Volunteer"
@@ -1011,38 +750,24 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Field research",
-      "Public speaking"
-    ],
-    "category": [
-      "Science Mentor"
-    ],
+    "skillAndTalent": ["Field research", "Public speaking"],
+    "category": ["Science Mentor"],
     "price": 210,
     "email": "fitsum.kassa17@example.com",
     "password": "1234",
     "phoneNumber": "+251911000017"
   },
   {
-    "id": 18,
     "sex": "Female",
     "name": "Selam",
     "fatherName": "Ayalew",
     "profileImage": "Path",
-    "gradeBand": [
-      "Kg-4"
-    ],
-    "mentoringMode": [
-      "In-Person"
-    ],
+    "gradeBand": ["Kg-4"],
+    "mentoringMode": ["In-Person"],
     "city": "Wolaita Sodo",
     "about": "Early childhood educator and storyteller.",
-    "education": [
-      "BA in Early Childhood Education"
-    ],
-    "WorkExperience": [
-      "Kindergarten Teacher at Sodo Model School"
-    ],
+    "education": ["BA in Early Childhood Education"],
+    "WorkExperience": ["Kindergarten Teacher at Sodo Model School"],
     "lifePhilosophy": "Every child deserves a champion.",
     "rating": {
       "roundedAverage": 5,
@@ -1067,40 +792,27 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Storytelling",
-      "Singing"
-    ],
-    "category": [
-      "Acadamic Tutor"
-    ],
+    "skillAndTalent": ["Storytelling", "Singing"],
+    "category": ["Acadamic Tutor"],
     "price": 180,
     "email": "selam.ayalew18@example.com",
     "password": "1234",
     "phoneNumber": "+251911000018"
   },
   {
-    "id": 19,
     "sex": "Male",
     "name": "Tesfaye",
     "fatherName": "Demissie",
     "profileImage": "Path",
-    "gradeBand": [
-      "11-12"
-    ],
-    "mentoringMode": [
-      "online"
-    ],
+    "gradeBand": ["11-12"],
+    "mentoringMode": ["online"],
     "city": "Harar",
     "about": "IT professional and coding mentor.",
     "education": [
       "BSc in Information Technology",
       "Certified Python Developer"
     ],
-    "WorkExperience": [
-      "Software Engineer at HararTech",
-      "Freelance Trainer"
-    ],
+    "WorkExperience": ["Software Engineer at HararTech", "Freelance Trainer"],
     "lifePhilosophy": "Keep learning, keep growing.",
     "rating": {
       "roundedAverage": 4,
@@ -1125,38 +837,23 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Python",
-      "Web development"
-    ],
-    "category": [
-      "Technology Mentor"
-    ],
+    "skillAndTalent": ["Python", "Web development"],
+    "category": ["Technology Mentor"],
     "price": 240,
     "email": "tesfaye.demissie19@example.com",
     "password": "1234",
     "phoneNumber": "+251911000019"
   },
   {
-    "id": 20,
     "sex": "Female",
     "name": "Marta",
     "fatherName": "Hailu",
     "profileImage": "Path",
-    "gradeBand": [
-      "5-8",
-      "9-10"
-    ],
-    "mentoringMode": [
-      "In-Person",
-      "online"
-    ],
+    "gradeBand": ["5-8", "9-10"],
+    "mentoringMode": ["In-Person", "online"],
     "city": "Shashemene",
     "about": "Literature teacher and creative writing coach.",
-    "education": [
-      "BA in Literature",
-      "MA in Creative Writing"
-    ],
+    "education": ["BA in Literature", "MA in Creative Writing"],
     "WorkExperience": [
       "Literature Teacher at Shashemene High School",
       "Writing Workshop Facilitator"
@@ -1185,14 +882,8 @@
     },
     "BackgroundCheck": true,
     "isVisible": true,
-    "skillAndTalent": [
-      "Creative writing",
-      "Editing"
-    ],
-    "category": [
-      "Acadamic Tutor",
-      "Art Mentor"
-    ],
+    "skillAndTalent": ["Creative writing", "Editing"],
+    "category": ["Acadamic Tutor", "Art Mentor"],
     "price": 200,
     "email": "marta.hailu20@example.com",
     "password": "1234",

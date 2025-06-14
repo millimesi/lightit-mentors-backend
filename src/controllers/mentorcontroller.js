@@ -33,10 +33,7 @@ export default class MentorController {
 
       // Fetch paginated and sorted list of mentors from the database
       const skip = (page - 1) * limit;
-      const listOfMentors = await Mentor.find(filter)
-        .sort({ numberOfMentee: 1 })
-        .skip(skip)
-        .limit(limit);
+      const listOfMentors = await Mentor.find(filter).skip(skip).limit(limit);
 
       // Get total number of mentors for pagination info
       const totalNumOfMentors = await Mentor.countDocuments(filter);
@@ -74,9 +71,9 @@ export default class MentorController {
 
       // Respond with total count and filtered mentor list
       const response = {
-        page,
-        totalPage: Math.ceil(totalNumOfMentors / limit),
-        mentorList,
+        page, // current page
+        totalPage: Math.ceil(totalNumOfMentors / limit), // total number of pages
+        mentorList, // mentor list of objects
       };
 
       res.status(200).json(response);
